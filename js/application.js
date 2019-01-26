@@ -3,10 +3,12 @@ var Backend = (function() {
 
 	return {
 		getFirstSlide: function(callback) {
-			callback(new Slides.SelectionSlide('First Slide', ['Hello', 'World', 'This is a button with a lot of text']));
+			callback(new Slides.RangeSlide('Why do they say it be like it do?', 1, 10));
+			// callback(new Slides.SelectionSlide('First Slide', ['Hello', 'World', 'This is a button with a lot of text']));
 		},
 		submitAnswer: function(answer, callback) {
 			callback(new Slides.SelectionSlide('Marmite', ['But pa might not', 'Eh?']));
+			// callback(new Slides.RangeSlide('Why do they say it be like it do?', 1, 10));
 		}
 	};
 
@@ -32,7 +34,8 @@ var Slides = (function() {
 	/** enum SlideType */
 	var SlideType = {
 		//QUESTION_SLIDE: 1,
-		SELECTION_SLIDE: 1
+		SELECTION_SLIDE: 1,
+		RANGE_SLIDE: 2
 	};
 
 	/** Slide::constructor(SlideType type) */
@@ -111,6 +114,69 @@ var Slides = (function() {
 		Events.onAnswerQuestion(index);
 	}
 
+	/** RangeSlide::constructor(min, max) */
+	var RangeSlide = function(question, min, max) {
+		// Call super constructor
+		Slide.call(this, SlideType.RANGE_SLIDE);
+
+		this.question = question;
+		this.min = min;
+		this.max = max;
+	}
+
+	/** RangeSlide extends Slide */
+	RangeSlide.prototype = Object.create(Slide.prototype);
+
+	/** RangeSlide::createElement overrides Slide::createElement */
+	RangeSlide.prototype.createElement = function() {
+		var container = Slide.prototype.createElement.call(this);
+		var center = container.querySelector('.slide__center');
+
+		// Create title containing the question we're asking
+		var title = document.createElement('h2');
+		title.textContent = this.question;
+		center.appendChild(title);
+
+		// Create slider/range control
+		var rangeContainer = document.createElement('div');
+		rangeContainer.setAttribute('class', 'range');
+
+		var rangeOptions = [];
+
+		for (var i = this.min; i <= this.max; i++) {
+			var rangeOption = document.createElement('button');
+			var self = this; // To avoid nested binds
+
+			rangeOption.addEventListener('click', (function(i) { // scope i so it isn't max when this triggers
+				return function() {
+					// 'Fill' all the numbers before this one, and this one
+					rangeOptions
+						.forEach(function(opt) {
+							if (opt[0] <= i)
+								opt[1].classList.add('active');
+							else
+								opt[1].classList.remove('active');
+						});
+
+					self.onChooseOption(i);
+				}
+			})(i));
+
+			rangeOption.textContent = i;
+			rangeContainer.appendChild(rangeOption);
+			rangeOptions.push([i, rangeOption]);
+		}
+
+		center.appendChild(rangeContainer);
+
+		return container;
+	}
+
+	/** RangeSlide::onChooseOption(int num) */
+	RangeSlide.prototype.onChooseOption = function(num) {
+		Events.onAnswerQuestion(num);
+	}
+
 	/** static switchSlide(Slide slide) */
 	var switchSlide = function(slide) {
 		var newSlideFragment = document.createDocumentFragment();
@@ -144,6 +210,7 @@ var Slides = (function() {
 		SlideType: SlideType,
 		Slide: Slide,
 		SelectionSlide: SelectionSlide,
+		RangeSlide: RangeSlide,
 
 		// Static methods
 		switchSlide: switchSlide

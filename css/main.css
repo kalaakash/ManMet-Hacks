@@ -46,8 +46,7 @@ button {
 
 	font-weight: 600;
 
-	box-shadow: 0 3px 0 #444;
-
+	user-select: none;
 	cursor: pointer;
 }
 
@@ -58,6 +57,33 @@ button.btn--primary {
 button.btn--primary:active {
 	transform: translateY(3px);
 	box-shadow: none;
+}
+
+/**
+ * Range control
+ */
+.range button:first-child {
+	border-radius: 5px;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.range button {
+	border-radius: 0;
+}
+
+.range button:last-child {
+	border-radius: 5px;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+.range button:hover {
+	background: rgba(0, 0, 0, 0.6);
+}
+
+.range button.active {
+	background: rgba(0, 0, 0, 0.75);
 }
 
 /**
@@ -100,11 +126,13 @@ button.btn--primary:active {
 
 .sliding-in {
 	animation: slide-in 0.7s ease-in-out;
+	pointer-events: none;
 }
 
 .sliding-out {
 	animation: slide-out 0.7s ease-in-out;
 	transform: translateX(-100%);
+	pointer-events: none; /* Don't mess with the answer after submitted! */
 }
 
 /**
