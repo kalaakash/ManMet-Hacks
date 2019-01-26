@@ -1,0 +1,73 @@
+body {
+	font-family: 'Source Sans Pro', 'Droid Sans', 'Open Sans', 'Ubuntu', sans-serif;
+	font-size: 30px;
+	line-height: 1.5em;
+	color: #333333;
+
+	background: #EEEEEE;
+
+	transition: background 0.3s ease-in-out;
+}
+
+/**
+ * Color schemes
+ */
+body.color-green { background: #4ad48e; color: #EEEEEE; }
+body.color-green button { background: #ab7eb9; box-shadow: 0 3px 0 #7b6482; }
+
+/**
+ * Buttons
+ */
+button {
+	border: none;
+	border-radius: 5px;
+	outline: none;
+	padding: 0.5em 0.7em;
+
+	background: #555;
+	color: #EEE;
+
+	font-weight: 600;
+
+	box-shadow: 0 3px 0 #444;
+
+	cursor: pointer;
+}
+
+button:active {
+	transform: translateY(3px);
+	box-shadow: none!important;
+}
+
+/**
+ * Slides
+ */
+.slide {
+	display: flex;
+	flex-direction: column;
+
+	/* Fill entire screen */
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+	/* Center content */
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+.slide h1,
+.slide h2,
+.slide h3,
+.slide h4,
+.slide h5 {
+	text-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+.slide h1 {
+	font-size: 2em;
+	font-weight: 700;
+}
