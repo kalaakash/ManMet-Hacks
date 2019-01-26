@@ -1,6 +1,8 @@
 Mood : Disgust
 
 Questions :
+Have you recently found something offensive, distasteful, or unpleasant?
+Was it from a taste which was either perceived or imagined?
 
 
 Solutions :
