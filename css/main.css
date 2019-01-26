@@ -11,6 +11,17 @@
 	100% { transform: translateX(-100%); }
 }
 
+@keyframes jiggle {
+	0% { transform: translateY(0); }
+	20% { transform: translateY(-60%); }
+	40% { transform: translateY(0); }
+}
+
+/**
+ * General styles
+ */
+* { box-sizing: border-box; }
+
 body {
 	font-family: 'Source Sans Pro', 'Droid Sans', 'Open Sans', 'Ubuntu', sans-serif;
 	font-size: 30px;
@@ -21,6 +32,20 @@ body {
 
 	transition: background 0.3s ease-in-out;
 	transition-delay: 0.7s;
+}
+
+h1, h2, h3, h4 {
+	margin: 0;
+	padding: 0.67em 0;
+}
+
+h1 {
+	padding: 0.5em 0; /* since 2em h1 size */
+}
+
+p {
+	margin: 0;
+	padding: 1em;
 }
 
 /**
@@ -48,6 +73,14 @@ button {
 
 	user-select: none;
 	cursor: pointer;
+}
+
+button:hover {
+	background: rgba(0, 0, 0, 0.6);		
+}
+
+button.active {
+	background: rgba(0, 0, 0, 0.75);
 }
 
 button.btn--primary {
@@ -78,12 +111,31 @@ button.btn--primary:active {
 	border-bottom-left-radius: 0;
 }
 
-.range button:hover {
-	background: rgba(0, 0, 0, 0.6);
+/**
+ * Loading dots
+ */
+.dot {
+	border-radius: 50%;
+	width: 10px;
+	height: 10px;
+	background: #DDD;
+	display: inline-block;
+	line-height: 1em;
+	margin-right: 5px;
+
+	animation: jiggle 1s ease-in-out infinite;
 }
 
-.range button.active {
-	background: rgba(0, 0, 0, 0.75);
+.dot:last-child {
+	margin-right: 0;
+}
+
+.dot:nth-child(2) {
+	animation-delay: 0.15s;
+}
+
+.dot:nth-child(3) {
+	animation-delay: 0.3s;
 }
 
 /**
@@ -117,11 +169,14 @@ button.btn--primary:active {
 .slide h1 {
 	font-size: 2em;
 	font-weight: 700;
+	padding-bottom: 0;
+	padding: 0;
 }
 
 .slide h2 {
 	font-size: 2em;
 	font-weight: 700;
+	padding-bottom: 0.7em;
 }
 
 .sliding-in {

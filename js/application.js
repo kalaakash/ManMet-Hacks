@@ -1,13 +1,85 @@
+/** namespace Colors */
+var Colors = (function() {
+	var currentColor = null;
+
+	var setColor = function(color) {
+		if (!color)
+			return;
+
+		// Replace all color- classes with nothing (i.e. remove)
+		var classAttr = document.body.getAttribute('class');
+		classAttr = classAttr.replace(/(^|\s+)color-.*?(\s+|$)/gi, '');
+		document.body.setAttribute('class', classAttr);
+
+		// Change the theme color
+		document.body.classList.add('color-' + color);
+
+		currentColor = color;
+	}
+
+	return {
+		RED: 'red',
+		GREEN: 'green',
+		WHITE: 'white',
+		setColor: setColor
+	};
+})();
+
 /** namespace Backend */
 var Backend = (function() {
 
+	// Local consts
+	var API_PATH = 'api.php',
+		  API_PATH_START = API_PATH + '?action=start',
+		  API_PATH_SUBMIT = API_PATH + '?action=submit';
+
+	function ajaxRequest(method, url, data, callback) {
+		var req = new XMLHttpRequest();
+		req.addEventListener('load', function() {
+			callback(req.responseText);
+		});
+		req.open(method, url);
+		try {
+			if (data !== null)
+				req.send(data);
+			else
+				req.send();
+		} catch (e) {
+			callback(JSON.stringify({ error: 'FAIL_SEND', exception: e }));
+		}
+	}
+
 	return {
 		getFirstSlide: function(callback) {
-			callback(new Slides.RangeSlide('Why do they say it be like it do?', 1, 10));
-			// callback(new Slides.SelectionSlide('First Slide', ['Hello', 'World', 'This is a button with a lot of text']));
+			ajaxRequest('GET', API_PATH_START, null, function(data) {
+				console.log(data);
+				var response = JSON.parse(data);
+
+				if (!data || !response || response.error) {
+					console.log('API error!');
+					// TODO
+					return;
+				}
+
+				var slide = null;
+				switch (response.type) {
+					case Slides.SlideType.SELECTION_SLIDE:
+						slide = new Slides.SelectionSlide(response.question, response.answers);
+						break;
+					default:
+						console.log('Error: unrecognized slide type!');
+				}
+
+				// Invoke our callback with the slide
+				callback(slide, response.color || null);
+			});
 		},
 		submitAnswer: function(answer, callback) {
-			callback(new Slides.SelectionSlide('Marmite', ['But pa might not', 'Eh?']));
+			var request = 'answer=' + encodeURI(answer);
+			ajaxRequest('POST', API_PATH_SUBMIT, request, function(data) {
+
+			});
+			callback(new Slides.SelectionSlide('Marmite', ['But pa might not', 'Eh?']), null);
 			// callback(new Slides.RangeSlide('Why do they say it be like it do?', 1, 10));
 		}
 	};
@@ -34,8 +106,8 @@ var Slides = (function() {
 	/** enum SlideType */
 	var SlideType = {
 		//QUESTION_SLIDE: 1,
-		SELECTION_SLIDE: 1,
-		RANGE_SLIDE: 2
+		SELECTION_SLIDE: 'SELECTION',
+		RANGE_SLIDE: 'RANGE'
 	};
 
 	/** Slide::constructor(SlideType type) */
@@ -88,6 +160,8 @@ var Slides = (function() {
 		list.setAttribute('class', 'options');
 		
 		var self = this; // To avoid binding functions...
+		var optionItemButtons = []; // So we can deactivate other options
+
 		this.options.forEach(function(option, index) {
 			// Create li elements containing buttons, bound on click
 			// to our handler, which takes the button index as a param
@@ -95,11 +169,15 @@ var Slides = (function() {
 			var optionItem = document.createElement('li');
 			var optionItemButton = document.createElement('button');
 			optionItemButton.textContent = option;
-			optionItemButton.addEventListener(
-				'click',
-				function() { self.onChooseOption(index); }
-			);
+			optionItemButton.addEventListener('click', function() {
+				// Show that we selected this, and deactivate any others
+				optionItemButtons.forEach(function(item) { item.classList.remove('active'); });
+				optionItemButton.classList.add('active');
 
+				// Invoke our handler
+				self.onChooseOption(index);
+			});
+			optionItemButtons.push(optionItemButton);
 			optionItem.appendChild(optionItemButton);
 			list.appendChild(optionItem);
 		});
@@ -221,26 +299,37 @@ var Slides = (function() {
 /** namespace Events */
 var Events = (function() {
 	var firstSlide = null,
-			startButton = document.querySelector('[data-action="start"]');
+			startButton = document.querySelector('[data-action="start"]'),
+			startColor = null,
+			currentColor = Colors.WHITE;
 
 	function onStart() {
 		if (firstSlide === null)
 			return;
-		// new Slides.SelectionSlide('Choose one', [ 'One', 'Two', 'Three' ])
+
+		// Change color
+		Colors.setColor(startColor);
+
+		// Switch to new slide
 		Slides.switchSlide(firstSlide);
 	}
 
 	function onAnswerQuestion(answer) {
-		Backend.submitAnswer(answer, function(slide) {
+		Backend.submitAnswer(answer, function(slide, color) {
+			// Change color to fit with question
+			Colors.setColor(color);
+
+			// Switch to the new slide
 			Slides.switchSlide(slide);
 		});
 	}
 
 	function setupFirstSlide() {
-		Backend.getFirstSlide(function(slide) {
+		Backend.getFirstSlide(function(slide, color) {
 			// Enable the start button and set first slide
 			firstSlide = slide;
 			startButton.textContent = 'Begin';
+			startColor = color;
 		});
 	}
 
