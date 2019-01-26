@@ -1,3 +1,17 @@
+/** namespace Backend */
+var Backend = (function() {
+
+	return {
+		getFirstSlide: function(callback) {
+			callback(new Slides.SelectionSlide('First Slide', ['Hello', 'World', 'This is a button with a lot of text']));
+		},
+		submitAnswer: function(answer, callback) {
+			callback(new Slides.SelectionSlide('Marmite', ['But pa might not', 'Eh?']));
+		}
+	};
+
+})();
+
 /**
  * namespace Slides
  *
@@ -70,10 +84,19 @@ var Slides = (function() {
 		var list = document.createElement('ul');
 		list.setAttribute('class', 'options');
 		
-		this.options.forEach(function(option) {
+		var self = this; // To avoid binding functions...
+		this.options.forEach(function(option, index) {
+			// Create li elements containing buttons, bound on click
+			// to our handler, which takes the button index as a param
+			// so that we know which option was selected
 			var optionItem = document.createElement('li');
 			var optionItemButton = document.createElement('button');
 			optionItemButton.textContent = option;
+			optionItemButton.addEventListener(
+				'click',
+				function() { self.onChooseOption(index); }
+			);
+
 			optionItem.appendChild(optionItemButton);
 			list.appendChild(optionItem);
 		});
@@ -81,6 +104,11 @@ var Slides = (function() {
 		center.appendChild(list);
 
 		return container;
+	}
+
+	/** SelectionSlide::onChooseOption(int index) */
+	SelectionSlide.prototype.onChooseOption = function(index) {
+		Events.onAnswerQuestion(index);
 	}
 
 	/** static switchSlide(Slide slide) */
@@ -123,9 +151,30 @@ var Slides = (function() {
 
 })();
 
+/** namespace Events */
 var Events = (function() {
+	var firstSlide = null,
+			startButton = document.querySelector('[data-action="start"]');
+
 	function onStart() {
-		Slides.switchSlide(new Slides.SelectionSlide('Choose one', [ 'One', 'Two', 'Three' ]));
+		if (firstSlide === null)
+			return;
+		// new Slides.SelectionSlide('Choose one', [ 'One', 'Two', 'Three' ])
+		Slides.switchSlide(firstSlide);
+	}
+
+	function onAnswerQuestion(answer) {
+		Backend.submitAnswer(answer, function(slide) {
+			Slides.switchSlide(slide);
+		});
+	}
+
+	function setupFirstSlide() {
+		Backend.getFirstSlide(function(slide) {
+			// Enable the start button and set first slide
+			firstSlide = slide;
+			startButton.textContent = 'Begin';
+		});
 	}
 
 	function setupListeners() {
@@ -141,8 +190,11 @@ var Events = (function() {
 	}
 
 	return {
-		setupListeners: setupListeners
+		setupListeners: setupListeners,
+		setupFirstSlide: setupFirstSlide,
+		onAnswerQuestion: onAnswerQuestion
 	}
 })();
 
 Events.setupListeners();
+Events.setupFirstSlide();
