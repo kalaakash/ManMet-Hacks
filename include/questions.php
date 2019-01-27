@@ -72,8 +72,8 @@ class RangeQuestion extends Question {
 
 	public function toArray() {
 		$arr = parent::toArray();
-		$arr['min'] = $min;
-		$arr['max'] = $max;
+		$arr['min'] = $this->min;
+		$arr['max'] = $this->max;
 		return $arr;
 	}
 
@@ -112,7 +112,7 @@ class QuestionRegistry {
 		return QuestionRegistry::$questions[$id];
 	}
 
-	public static function getNextQuestion($id, $answer) {
+	public static function getNextQuestionId($id, $answer) {
 		// If there is no next question, then this means we have reached a terminal question.
 		// In this case, we return false to indicate that the callee should deal with this
 		// (i.e. work out results etc.)
@@ -129,7 +129,7 @@ class QuestionRegistry {
 		if (!array_key_exists($id, QuestionRegistry::$questions))
 			throw new Exception('Next question found but has invalid ID: not found in registry');
 
-		return QuestionRegistry::$questions[$nextId];
+		return $nextId;
 	}
 
 }

@@ -78,12 +78,11 @@ class SubmitActionHandler implements ActionHandler {
 		$_SESSION['answers'][$currentId] = $data['answer'];
 
 		// Get & return next question based on answer
-		$nextQuestion = QuestionRegistry::getNextQuestion($currentId, $data['answer']);
-		$_SESSION['currentQuestion'] = 2; // BIG TODO
+		$nextQuestionId = QuestionRegistry::getNextQuestionId($currentId, $data['answer']);
 
 		// If we have no next question, this means we've reached a terminal question:
 		// determine and return their results!
-		if (!$nextQuestion) {
+		if (!$nextQuestionId) {
 			$gen = new ResultsGenerator($_SESSION['answers']);
 			$response = $gen->generate();
 			$response['type'] = 'RESULTS';
@@ -95,6 +94,10 @@ class SubmitActionHandler implements ActionHandler {
 			return $response;
 		}
 
+		// Update current question
+		$_SESSION['currentQuestion'] = $nextQuestionId;
+
+		$nextQuestion = QuestionRegistry::getQuestion($nextQuestionId);
 		return $nextQuestion->toArray();
 	}
 
