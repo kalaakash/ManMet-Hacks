@@ -37,7 +37,7 @@ class ResultsGenerator {
 
 	private function checkEquality($equalityStr) {
 		$parts = explode('=', $equalityStr);
-		if (!array_key_exists($parts[0], $this->answers))
+		if (!array_key_exists(intval($parts[0]), $this->answers))
 			return false;
 
 		return $this->answers[intval($parts[0])] === $parts[1];
