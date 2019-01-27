@@ -3,33 +3,31 @@ Mood : Anger
 Questions :
 
 After calmly reflecting upon yourself,
-Has something recently gone wrong which is causing you pain or anger?
-Have you been speaking loudly, shouting or abusing to express yourself lately?
-Have you been having problems with concentration?
-Have you been over-sensitivity to what is said to you lately?
-Have you been sweating heavily and getting aggressive when you lose control or feel angry?
+1. Has something recently gone wrong which is causing you pain or anger? (N = mental disability, Y = small term problem )
+2. Have you been speaking loudly, shouting or abusing and losing concentration?
+3. Have you been sweating heavily and getting aggressive when you lose control or become over-sensitive to what people say?
 
 Solutions :
 
 We do understand that you are angry and under a bit of stress. To help try the following :
 
-Pain and anger are temporary, it will all go away. Just give it time.
-Calm yourself down by deep breathing and meditation.
-Go to your happy place and ignore the negativity around yourself.
-Talk out the situation and make sure you take care of yourself.
-Clearly state your feelings by writing or talking about the situation, as a form of release of stress and anger.
-Try not to personally attack anyone because it could affect your relation with them.
-Keep safety as a priority and do not injure yourself on anyone around you.
-Try to resolve any issue by dealing with the situation calmly.
-Take a step back and ensure that you are restful.
-
+(Q1 = true)             1. Pain and anger are temporary, it will all go away. Just give it time.
+(Q1 = true and Q2= true)2. Calm yourself down by deep breathing and meditation.
+(Q1 = true and Q3 = true)3. Go to your happy place and ignore the negativity around yourself.
+(Q1 = true and Q2 = true)4. Take a step back from the situation and make sure you take care of yourself.
+(Q2 = true)              5. Try to resolve any issue by dealing with the situation calmly.
+(Q1 = true and Q3 = true)6. Try not to personally attack anyone because it could affect your relation with them.
+(Q1 = true and Q2 = true)7. Keep safety as a priority and do not injure yourself on anyone around you.
+(Either way)             8. Clearly state your feelings by writing or talking about the situation, as a form of release of stress and anger.
 
 Food: Enjoy some comfort food for some time to keep yourself calm and cool.
   Berries are useful to reduce blood pressure and is very healthy.
   Sipping green tea is very helpful.
   Having a combination of complex carbohydrates and healthy fat is very helpful if you are feeling cranky. For example, apples and peanut butter.
+
 Places: Nearest coffee shop, supermarket. Could visit parents or friends who you think are helpful and would listen to you.
-Events: Evenets near (location of user)
-Videos: https://www.youtube.com/watch?v=aiTgKYqRUXc , https://youtu.be/UkM-FjfN6Mc, https://www.youtube.com/watch?v=Je3vDBqGgL0 (meme)
-Music: https://open.spotify.com/user/spotify/playlist/37i9dQZF1DWYBO1MoTDhZI?si=i1QkE0XNQpKw1Xat1a0knw
-https://open.spotify.com/user/spotify/playlist/37i9dQZF1DX4WYpdgoIcn6?si=uex074vBS8meDRldvwAJyg
+
+Videos: https://www.youtube.com/watch?v=BsVq5R_F6RA (Anger management video), https://youtu.be/UkM-FjfN6Mc (anti-anxiety video), https://www.youtube.com/watch?v=Je3vDBqGgL0 (meme = funny video)
+
+Music: https://open.spotify.com/user/spotify/playlist/37i9dQZF1DWYBO1MoTDhZI?si=i1QkE0XNQpKw1Xat1a0knw (Good vibes playlist)
+https://open.spotify.com/user/spotify/playlist/37i9dQZF1DX4WYpdgoIcn6?si=uex074vBS8meDRldvwAJyg (Chill hits)
