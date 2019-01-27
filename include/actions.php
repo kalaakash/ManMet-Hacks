@@ -12,7 +12,7 @@ class Actions {
 		Actions::$actionHandlers[$action] = $handler;
 	}
 
-	public static function invokeAction($action, $data) {
+	public static function invokeAction($action, $data){
 		if (is_null($action)
 				|| !array_key_exists($action, Actions::$actionHandlers)) {
 			return make_error_response(ErrorCode::BAD_ACTION, 'Action does not exist');

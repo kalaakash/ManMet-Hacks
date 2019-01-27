@@ -151,52 +151,52 @@ QuestionRegistry::addSelectionQuestion(13, 'How would you best describe your moo
 
 //Anger
 
-QuestionRegistry::addSelectionQuestion(14, 'After calmly reflecting upon yourself, has something recently gone wrong which is causing you pain or anger?', ['Yes', 'No'], [15,15]);
+QuestionRegistry::addSelectionQuestion(14, 'After calmly reflecting upon yourself, has something recently gone wrong which is causing you pain or anger? ', ['Yes', 'No'], [15,15]);
 QuestionRegistry::addSelectionQuestion(15, 'After calmly reflecting upon yourself, have you been speaking loudly, shouting or abusing and losing concentration?', ['Yes', 'No'], [16,16]);
-QuestionRegistry::addSelectionQuestion(16, 'After calmly reflecting upon yourself, has something recently gone wrong which is causing you pain or anger?', ['Yes', 'No'], null);
+QuestionRegistry::addSelectionQuestion(16, 'Have you been sweating heavily and getting aggressive when you lose control or become over-sensitive to what people say? ', ['Yes', 'No'], null);
 
 //Fear
 
 QuestionRegistry::addSelectionQuestion(17, 'Have you recently come across something that caused you to be insecure or afraid?', ['Yes', 'No'], [18,18]);
 QuestionRegistry::addSelectionQuestion(18, 'Is there a sense of agitation or anxiety because of an immediate imminent danger?', ['Yes', 'No'], [19,19]);
 QuestionRegistry::addSelectionQuestion(19, 'Do you feel like you can\'t sleep and have restless nights and feel like you\'re losing control?', ['Yes', 'No'], [20,20]);
-QuestionRegistry::addSelectionQuestion(20, 'After calmly reflecting upon yourself, has something recently gone wrong which is causing you pain or anger?', ['Yes', 'No'], null);
+QuestionRegistry::addSelectionQuestion(20, 'Did you face a panic attack (elevated heart rate, chills, sweating, choking sensation, etc.) till now?', ['Yes', 'No'], null);
 
 //Sadness
 
-QuestionRegistry::addSelectionQuestion(21, 'After calmly reflecting upon yourself, has something recently gone wrong which is causing you pain or anger?', ['Yes', 'No'], [15,15]);
-QuestionRegistry::addSelectionQuestion(22, 'After calmly reflecting upon yourself, has something recently gone wrong which is causing you pain or anger?', ['Yes', 'No'], [15,15]);
-QuestionRegistry::addSelectionQuestion(23, 'After calmly reflecting upon yourself, has something recently gone wrong which is causing you pain or anger?', ['Yes', 'No'], null);
+QuestionRegistry::addSelectionQuestion(21, 'Has something happened recently to put your mood down?', ['Yes', 'No'], [22,22]);
+QuestionRegistry::addSelectionQuestion(22, 'Are you feeling depressed or feel like hurting yourself?', ['Yes', 'No'], [23,23]);
+QuestionRegistry::addSelectionQuestion(23, 'Do you feel that you have low self-esteem?', ['Yes', 'No'], null);
 
 //Shame
 
-QuestionRegistry::addSelectionQuestion(24, 'After calmly reflecting upon yourself, has something recently gone wrong which is causing you pain or anger?', ['Yes', 'No'], [15,15]);
-QuestionRegistry::addSelectionQuestion(25, 'After calmly reflecting upon yourself, has something recently gone wrong which is causing you pain or anger?', ['Yes', 'No'], [15,15]);
-QuestionRegistry::addSelectionQuestion(26, 'After calmly reflecting upon yourself, has something recently gone wrong which is causing you pain or anger?', ['Yes', 'No'], [15,15]);
+QuestionRegistry::addSelectionQuestion(24, 'Did you do something to embarrass yourself?', ['Yes', 'No'], [15,15]);
+QuestionRegistry::addSelectionQuestion(25, 'Are you too self-aware or expect yourself to have a high self-esteem?', ['Yes', 'No'], [15,15]);
+QuestionRegistry::addSelectionQuestion(26, 'Do you have high standards and expectations, and if you fail to achieve them, blame yourself?', ['Yes', 'No'], [15,15]);
 
 //Disgust
 
-QuestionRegistry::addSelectionQuestion(27, 'After calmly reflecting upon yourself, has something recently gone wrong which is causing you pain or anger?', ['Yes', 'No'], [15,15]);
-QuestionRegistry::addSelectionQuestion(28, 'After calmly reflecting upon yourself, has something recently gone wrong which is causing you pain or anger?', ['Yes', 'No'], [15,15]);
-QuestionRegistry::addSelectionQuestion(29, 'After calmly reflecting upon yourself, has something recently gone wrong which is causing you pain or anger?', ['Yes', 'No'], [15,15]);
+QuestionRegistry::addSelectionQuestion(27, 'Have you recently found something offensive, distasteful, or unpleasant?', ['Yes', 'No'], [28,28]);
+QuestionRegistry::addSelectionQuestion(28, 'Could you have obsessive-compulsive disorder (OCD), anorexia or bulimia?', ['Yes', 'No'], [29,29]);
+QuestionRegistry::addSelectionQuestion(29, 'Have you felt any nausea or an urge to throw up recently?', ['Yes', 'No'], null);
 
 //Jealous
 
-QuestionRegistry::addSelectionQuestion(30, 'After calmly reflecting upon yourself, has something recently gone wrong which is causing you pain or anger?', ['Yes', 'No'], [15,15]);
-QuestionRegistry::addSelectionQuestion(31, 'After calmly reflecting upon yourself, has something recently gone wrong which is causing you pain or anger?', ['Yes', 'No'], [15,15]);
-QuestionRegistry::addSelectionQuestion(32, 'After calmly reflecting upon yourself, has something recently gone wrong which is causing you pain or anger?', ['Yes', 'No'], [15,15]);
-QuestionRegistry::addSelectionQuestion(33, 'After calmly reflecting upon yourself, has something recently gone wrong which is causing you pain or anger?', ['Yes', 'No'], [15,15]);
+QuestionRegistry::addSelectionQuestion(30, ' ', ['Yes', 'No'], [15,15]);
+QuestionRegistry::addSelectionQuestion(31, ' ', ['Yes', 'No'], [15,15]);
+QuestionRegistry::addSelectionQuestion(32, ' ', ['Yes', 'No'], [15,15]);
+QuestionRegistry::addSelectionQuestion(33, ' ', ['Yes', 'No'], [15,15]);
 
 //Happiness
 
-QuestionRegistry::addSelectionQuestion(34, 'After calmly reflecting upon yourself, has something recently gone wrong which is causing you pain or anger?', ['Yes', 'No'], [15,15]);
-QuestionRegistry::addSelectionQuestion(35, 'After calmly reflecting upon yourself, has something recently gone wrong which is causing you pain or anger?', ['Yes', 'No'], [15,15]);
-QuestionRegistry::addSelectionQuestion(36, 'After calmly reflecting upon yourself, has something recently gone wrong which is causing you pain or anger?', ['Yes', 'No'], [15,15]);
+QuestionRegistry::addSelectionQuestion(34, ' ', ['Yes', 'No'], [15,15]);
+QuestionRegistry::addSelectionQuestion(35, ' ', ['Yes', 'No'], [15,15]);
+QuestionRegistry::addSelectionQuestion(36, ' ', ['Yes', 'No'], [15,15]);
 
 //Love
 
-QuestionRegistry::addSelectionQuestion(37, 'After calmly reflecting upon yourself, has something recently gone wrong which is causing you pain or anger?', ['Yes', 'No'], [15,15]);
-QuestionRegistry::addSelectionQuestion(38, 'After calmly reflecting upon yourself, has something recently gone wrong which is causing you pain or anger?', ['Yes', 'No'], [15,15]);
-QuestionRegistry::addSelectionQuestion(39, 'After calmly reflecting upon yourself, has something recently gone wrong which is causing you pain or anger?', ['Yes', 'No'], [15,15]);
+QuestionRegistry::addSelectionQuestion(37, ' ', ['Yes', 'No'], [15,15]);
+QuestionRegistry::addSelectionQuestion(38, ' ', ['Yes', 'No'], [15,15]);
+QuestionRegistry::addSelectionQuestion(39, ' ', ['Yes', 'No'], [15,15]);
 
 ?>
