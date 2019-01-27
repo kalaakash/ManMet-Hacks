@@ -472,6 +472,7 @@ var Slides = (function() {
 					spanElem = document.createElement('span');
 
 			linkElem.href = video.url;
+			linkElem.target = '_blank';
 			spanElem.textContent = video.title;
 
 			iconElem.src = 'images/icons8-' + video.icon + '-100.png';
@@ -498,6 +499,7 @@ var Slides = (function() {
 					spanElem = document.createElement('span');
 
 			linkElem.href = music.url;
+			linkElem.target = '_blank';
 			spanElem.textContent = music.title;
 
 			iconElem.src = 'images/icons8-spotify-96.png';
