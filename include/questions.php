@@ -182,21 +182,21 @@ QuestionRegistry::addSelectionQuestion(29, 'Have you felt any nausea or an urge 
 
 //Jealous
 
-QuestionRegistry::addSelectionQuestion(30, ' ', ['Yes', 'No'], [15,15]);
-QuestionRegistry::addSelectionQuestion(31, ' ', ['Yes', 'No'], [15,15]);
-QuestionRegistry::addSelectionQuestion(32, ' ', ['Yes', 'No'], [15,15]);
-QuestionRegistry::addSelectionQuestion(33, ' ', ['Yes', 'No'], [15,15]);
+QuestionRegistry::addSelectionQuestion(30, 'Do you feel irritated because of some situation or relationship in your life?', ['Yes', 'No'], [31,31]);
+QuestionRegistry::addSelectionQuestion(31, 'Have you been feeling less self-confident lately?', ['Yes', 'No'], [32,32]);
+QuestionRegistry::addSelectionQuestion(32, 'Are you insecure about someone or something that is dear to you?', ['Yes', 'No'], [33,33]);
+QuestionRegistry::addSelectionQuestion(33, 'Do you feel irritated of others success who are in a healthy competition with you?', ['Yes', 'No'], null);
 
 //Happiness
 
-QuestionRegistry::addSelectionQuestion(34, ' ', ['Yes', 'No'], [15,15]);
-QuestionRegistry::addSelectionQuestion(35, ' ', ['Yes', 'No'], [15,15]);
-QuestionRegistry::addSelectionQuestion(36, ' ', ['Yes', 'No'], [15,15]);
+QuestionRegistry::addRangeQuestion(34, 'How good do you feel about yourself today? (0 is horrible and 10 is amazing)', 0, 10,[35,35,35,35,35,35,35,35,35,35,35]);
+QuestionRegistry::addSelectionQuestion(35, ' Do you think you can push further and be more productive than you did over the past week?', ['Yes', 'No'], [36,36]);
+QuestionRegistry::addSelectionQuestion(36, 'Do you still follow your passions and hobbies?', ['Yes', 'No'], null);
 
 //Love
 
-QuestionRegistry::addSelectionQuestion(37, ' ', ['Yes', 'No'], [15,15]);
-QuestionRegistry::addSelectionQuestion(38, ' ', ['Yes', 'No'], [15,15]);
-QuestionRegistry::addSelectionQuestion(39, ' ', ['Yes', 'No'], [15,15]);
+QuestionRegistry::addRangeQuestion(37, 'How joyful do you feel today? (0 is horrible and 10 is amazing)', 0, 10,[38,38,38,38,38,38,38,38,38,38,38]);
+QuestionRegistry::addSelectionQuestion(38, 'Do you think you can help others with your positivity?', ['Yes', 'No'], [39,39]);
+QuestionRegistry::addSelectionQuestion(39, 'Are you in control of your life mentally, emotionally and physically?', ['Yes', 'No'],null);
 
 ?>
