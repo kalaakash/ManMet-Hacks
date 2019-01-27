@@ -39,6 +39,11 @@ var Backend = (function() {
 			callback(req.responseText);
 		});
 		req.open(method, url);
+
+		// Add request headers so data is decoded properly
+		if (method.toLowerCase() === 'post')
+			req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
 		try {
 			if (data !== null)
 				req.send(data);
@@ -49,37 +54,42 @@ var Backend = (function() {
 		}
 	}
 
+	function handleSlideData(data, callback) {
+		console.log(data);
+
+		var response = JSON.parse(data);
+
+		if (!data || !response || response.error) {
+			console.log(data);
+			console.log('API error!');
+			// TODO
+			return;
+		}
+
+		var slide = null;
+		switch (response.type) {
+			case Slides.SlideType.SELECTION_SLIDE:
+				slide = new Slides.SelectionSlide(response.question, response.answers);
+				break;
+			default:
+				console.log('Error: unrecognized slide type!');
+		}
+
+		// Invoke our callback with the slide
+		callback(slide, response.color || null);
+	}
+
 	return {
 		getFirstSlide: function(callback) {
 			ajaxRequest('GET', API_PATH_START, null, function(data) {
-				console.log(data);
-				var response = JSON.parse(data);
-
-				if (!data || !response || response.error) {
-					console.log('API error!');
-					// TODO
-					return;
-				}
-
-				var slide = null;
-				switch (response.type) {
-					case Slides.SlideType.SELECTION_SLIDE:
-						slide = new Slides.SelectionSlide(response.question, response.answers);
-						break;
-					default:
-						console.log('Error: unrecognized slide type!');
-				}
-
-				// Invoke our callback with the slide
-				callback(slide, response.color || null);
+				handleSlideData(data, callback);
 			});
 		},
 		submitAnswer: function(answer, callback) {
 			var request = 'answer=' + encodeURI(answer);
 			ajaxRequest('POST', API_PATH_SUBMIT, request, function(data) {
-
+				handleSlideData(data, callback);
 			});
-			callback(new Slides.SelectionSlide('Marmite', ['But pa might not', 'Eh?']), null);
 			// callback(new Slides.RangeSlide('Why do they say it be like it do?', 1, 10));
 		}
 	};
