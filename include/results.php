@@ -213,6 +213,10 @@ add_food('12=0|13=0','raspberry','Berries are useful to reduce blood pressure an
 add_food('12=0|13=0','tea','Sipping green tea is very helpful.');
 add_food('12=0|13=0','apple','Having a combination of complex carbohydrates and healthy fat is very helpful if you are feeling cranky. For example, apples and peanut butter.');
 
+add_place('12=0|13=0','coffee','Coffee Shop', 'Visit a coffee shop to calm down and have a nice beverage');
+add_place('12=0|13=0','small-business','Supermarket', 'Visit a supermarket to get fod and relax');
+add_place('12=0|13=0','forest','Park', 'Go to a park to enjoy nature and relax your senses.');
+
 add_video('12=0|13=0','Anger Management video','https://www.youtube.com/watch?v=BsVq5R_F6RA');
 add_video('12=0|13=0','Anti-anxiety video','https://youtu.be/UkM-FjfN6Mc');
 add_video('12=0|13=0','Funny Memes video','https://www.youtube.com/watch?v=Je3vDBqGgL0');
@@ -233,6 +237,10 @@ add_tips('12=1|13=1', ['Eat comforting food to relax yourself.']);
 add_food('12=1|13=1','raspberry','Berries are useful to reduce blood pressure and is very healthy.');
 add_food('12=1|13=1','chocolate-bar','Dark chocolate helps reduce stress and lowers blood pressure.');
 add_food('12=1|13=1',' beef','Proteins are very healthy and relieves stress.');
+
+add_place('12=1|13=1','clinic','General Practitioner', 'Visit a GP to understand your state and get treatment, if needed ');
+add_place('12=1|13=1','small-business','Supermarket', 'Visit a supermarket to get fod and relax');
+add_place('12=1|13=1','forest','Park', 'Go to a park to enjoy nature and relax your senses.');
 
 add_video('12=1|13=1','Stress-releiving music video','https://www.youtube.com/watch?v=b7IrNtS2rRE');
 add_video('12=1|13=1','Guided Meditation video','https://www.youtube.com/watch?v=4EaMJOo1jks');
@@ -255,6 +263,10 @@ add_food('12=2|13=2','raspberry','Berries are useful to reduce blood pressure an
 add_food('12=2|13=2','apple','Whole fruits are appatizing and healthy which helps reduce stress and sadness levels.');
 add_food('12=2|13=2','tea','Sipping green tea is very helpful.');
 
+add_place('12=2|13=2','small-business','Supermarket', 'Visit a supermarket to get fod and relax');
+add_place('12=2|13=2','forest','Park', 'Go to a park to enjoy nature and relax your senses.');
+add_place('12=2|13=2','clinic','General Practitioner', 'Visit a GP to understand your state and get treatment, if needed ');
+
 add_video('12=2|13=2','Best Music of 2018','https://www.youtube.com/watch?v=KOgvA98FifU');
 add_video('12=2|13=2','Funny Memes video','https://www.youtube.com/watch?v=Je3vDBqGgL0');
 
@@ -273,6 +285,10 @@ add_tips('25=0|26=0', ['Avoid the self-blame game.']);
 add_food('12=3|13=3','grain-and-cereal',' Do not over-eat due to stress. Eat whole-grain cereal with low-fat milk');
 add_food('12=3|13=3','apple','Whole fruits are appatizing and healthy which helps reduce stress and sadness levels.');
 add_food('12=3|13=3','natural-food','It is healthy and does not allow you to gain weight that easily.');
+
+add_place('12=3|13=3','small-business','Supermarket', 'Visit a supermarket to get fod and relax');
+add_place('12=3|13=3','forest','Park', 'Go to a park to enjoy nature and relax your senses.');
+add_place('12=3|13=3','coffee','Coffee Shop', 'Visit a coffee shop to calm down and have a nice beverage');
 
 add_video('12=3|13=3','Funny Memes video','https://www.youtube.com/watch?v=Je3vDBqGgL0');
 
