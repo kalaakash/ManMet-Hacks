@@ -235,12 +235,12 @@ add_food('12=1|13=1','raspberry','Berries are useful to reduce blood pressure an
 add_food('12=1|13=1','chocolate-bar','Dark chocolate helps reduce stress and lowers blood pressure.');
 add_food('12=1|13=1','steak','Proteins are very healthy and relieves stress.');
 
-add_video('12=0|13=0','Stress-releiving music video','https://www.youtube.com/watch?v=b7IrNtS2rRE');
-add_video('12=0|13=0','Guided Meditation video','https://www.youtube.com/watch?v=4EaMJOo1jks');
-add_video('12=0|13=0','Funny Memes video','https://www.youtube.com/watch?v=Je3vDBqGgL0');
+add_video('12=1|13=1','Stress-releiving music video','https://www.youtube.com/watch?v=b7IrNtS2rRE');
+add_video('12=1|13=1','Guided Meditation video','https://www.youtube.com/watch?v=4EaMJOo1jks');
+add_video('12=1|13=1','Funny Memes video','https://www.youtube.com/watch?v=Je3vDBqGgL0');
 
-add_music('12=0|13=0','Relax & Unwind playlist','https://open.spotify.com/user/spotify/playlist/37i9dQZF1DWU0ScTcjJBdj?si=bcmaoy64TS6NCYstqrdPj');
-add_music('12=0|13=0','Lounge - Soft House playlist','https://open.spotify.com/user/spotify/playlist/37i9dQZF1DX82pCGH5USnM?si=vfm2FDC6TJegzoD1WfLOJA');
+add_music('12=1|13=1','Relax & Unwind playlist','https://open.spotify.com/user/spotify/playlist/37i9dQZF1DWU0ScTcjJBdj?si=bcmaoy64TS6NCYstqrdPj');
+add_music('12=1|13=1','Lounge - Soft House playlist','https://open.spotify.com/user/spotify/playlist/37i9dQZF1DX82pCGH5USnM?si=vfm2FDC6TJegzoD1WfLOJA');
 
 //Sadness results
 
@@ -256,11 +256,11 @@ add_food('12=2|13=2','raspberry','Berries are useful to reduce blood pressure an
 add_food('12=2|13=2','apple','Whole fruits are appatizing and healthy which helps reduce stress and sadness levels.');
 add_food('12=2|13=2','tea','Sipping green tea is very helpful.');
 
-add_video('12=0|13=0','Best Music of 2018','https://www.youtube.com/watch?v=KOgvA98FifU');
-add_video('12=0|13=0','Funny Memes video','https://www.youtube.com/watch?v=Je3vDBqGgL0');
+add_video('12=2|13=2','Best Music of 2018','https://www.youtube.com/watch?v=KOgvA98FifU');
+add_video('12=2|13=2','Funny Memes video','https://www.youtube.com/watch?v=Je3vDBqGgL0');
 
-add_music('12=0|13=0','Today\'s Top Hits','https://open.spotify.com/user/spotify/playlist/37i9dQZF1DXcBWIGoYBM5M?si=YhrgXCsZSJSpKrguMdV9Hw');
-add_music('12=0|13=0','Happy Hits playlist','https://open.spotify.com/user/spotify/playlist/37i9dQZF1DXdPec7aLTmlC?si=phPoTuiRRoaeEQQ4WD4fjg');
+add_music('12=2|13=2','Today\'s Top Hits','https://open.spotify.com/user/spotify/playlist/37i9dQZF1DXcBWIGoYBM5M?si=YhrgXCsZSJSpKrguMdV9Hw');
+add_music('12=2|13=2','Happy Hits playlist','https://open.spotify.com/user/spotify/playlist/37i9dQZF1DXdPec7aLTmlC?si=phPoTuiRRoaeEQQ4WD4fjg');
 
 
 //Shame results
@@ -275,10 +275,10 @@ add_food('12=3|13=3','grain-and-cereal',' Do not over-eat due to stress. Eat who
 add_food('12=3|13=3','apple','Whole fruits are appatizing and healthy which helps reduce stress and sadness levels.');
 add_food('12=3|13=3','natural-food','It is healthy and does not allow you to gain weight that easily.');
 
-add_video('12=0|13=0','Funny Memes video','https://www.youtube.com/watch?v=Je3vDBqGgL0');
+add_video('12=3|13=3','Funny Memes video','https://www.youtube.com/watch?v=Je3vDBqGgL0');
 
-add_music('12=0|13=0','Guilty Pleasures playlist','https://open.spotify.com/user/spotify/playlist/37i9dQZF1DX4pUKG1kS0Ac?si=yPd_Bc64RTeIqG26kgbMpw');
-add_music('12=0|13=0','Confidence Booster playlist','https://open.spotify.com/user/spotify/playlist/37i9dQZF1DX4fpCWaHOned?si=rV_qu3ykQlOy1tTBP8sXeQ');
+add_music('12=3|13=3','Guilty Pleasures playlist','https://open.spotify.com/user/spotify/playlist/37i9dQZF1DX4pUKG1kS0Ac?si=yPd_Bc64RTeIqG26kgbMpw');
+add_music('12=3|13=3','Confidence Booster playlist','https://open.spotify.com/user/spotify/playlist/37i9dQZF1DX4fpCWaHOned?si=rV_qu3ykQlOy1tTBP8sXeQ');
 
 
 //Disgust results
@@ -294,12 +294,12 @@ add_food('12=4|13=4','steak','Proteins are very healthy and relieves stress.');
 add_food('12=4|13=4','apple','Whole fruits are appatizing and healthy which helps reduce stress and sadness levels.');
 add_food('12=4|13=4','natural-food','Green, leafy vegetables are very healthy and keeps you going.');
 
-add_video('12=0|13=0','Satisfying video on Odd Objects','https://www.youtube.com/watch?v=M3VfUmO8ehw');
-add_video('12=0|13=0','Relaxing Meditation video','https://www.youtube.com/watch?v=1ZYbU82GVz4');
-add_video('12=0|13=0','ASMR satisfaction video','https://www.youtube.com/watch?v=r5aD9iqdFFI');
+add_video('12=4|13=4','Satisfying video on Odd Objects','https://www.youtube.com/watch?v=M3VfUmO8ehw');
+add_video('12=4|13=4','Relaxing Meditation video','https://www.youtube.com/watch?v=1ZYbU82GVz4');
+add_video('12=4|13=4','ASMR satisfaction video','https://www.youtube.com/watch?v=r5aD9iqdFFI');
 
-add_music('12=0|13=0','Deep Focus playlist','https://open.spotify.com/user/spotify/playlist/37i9dQZF1DWZeKCadgRdKQ?si=DrtzWR51SZqobTth42n7nw');
-add_music('12=0|13=0','Have a Great Day','https://open.spotify.com/user/spotify/playlist/37i9dQZF1DX7KNKjOK0o75?si=PdvFIxF9RIGnOWAyeK-Vog');
+add_music('12=4|13=4','Deep Focus playlist','https://open.spotify.com/user/spotify/playlist/37i9dQZF1DWZeKCadgRdKQ?si=DrtzWR51SZqobTth42n7nw');
+add_music('12=4|13=4','Have a Great Day','https://open.spotify.com/user/spotify/playlist/37i9dQZF1DX7KNKjOK0o75?si=PdvFIxF9RIGnOWAyeK-Vog');
 
 
 //Jealous results
@@ -316,11 +316,11 @@ add_food('12=5|13=5','chocolate-bar','Dark chocolate helps reduce stress and low
 add_food('12=5|13=5','apple','Whole fruits are appatizing and healthy which helps reduce stress and sadness levels.');
 add_food('12=5|13=5','tea','Sipping green tea is very helpful.');
 
-add_video('12=0|13=0','Relaxing sounds & music','https://www.youtube.com/watch?v=1ZYbU82GVz4');
-add_video('12=0|13=0','Funny Memes video','https://www.youtube.com/watch?v=Je3vDBqGgL0');
+add_video('12=5|13=5','Relaxing sounds & music','https://www.youtube.com/watch?v=1ZYbU82GVz4');
+add_video('12=5|13=5','Funny Memes video','https://www.youtube.com/watch?v=Je3vDBqGgL0');
 
-add_music('12=0|13=0','Relax & Unwind playlist','https://open.spotify.com/user/spotify/playlist/37i9dQZF1DWU0ScTcjJBdj?si=bcmaoy64TS6NCYstqrdPj');
-add_music('12=0|13=0','Lounge - Soft House playlist','https://open.spotify.com/user/spotify/playlist/37i9dQZF1DX82pCGH5USnM?si=vfm2FDC6TJegzoD1WfLOJA');
+add_music('12=5|13=5','Relax & Unwind playlist','https://open.spotify.com/user/spotify/playlist/37i9dQZF1DWU0ScTcjJBdj?si=bcmaoy64TS6NCYstqrdPj');
+add_music('12=5|13=5','Lounge - Soft House playlist','https://open.spotify.com/user/spotify/playlist/37i9dQZF1DX82pCGH5USnM?si=vfm2FDC6TJegzoD1WfLOJA');
 
 //Happiness results
 
@@ -332,11 +332,11 @@ add_food('12=6|13=6','chocolate-bar','Dark chocolate helps reduce stress and low
 add_food('12=6|13=6','apple','Whole fruits are appatizing and healthy which helps reduce stress and sadness levels.');
 add_food('12=6|13=6','natural-food','Green, leafy vegetables are very healthy and keeps you going.');
 
-add_video('12=0|13=0','How to be more Productive','https://www.youtube.com/watch?v=V3WrCx3mwNo');
-add_video('12=0|13=0','Funny Memes video','https://www.youtube.com/watch?v=Je3vDBqGgL0');
+add_video('12=6|13=6','How to be more Productive','https://www.youtube.com/watch?v=V3WrCx3mwNo');
+add_video('12=6|13=6','Funny Memes video','https://www.youtube.com/watch?v=Je3vDBqGgL0');
 
-add_music('12=0|13=0','Intense Studying playlist','https://open.spotify.com/user/spotify/playlist/37i9dQZF1DX8NTLI2TtZa6?si=bcRoPLs9RBOJk3ezRv7oaQ');
-add_music('12=0|13=0','Songs to Sing in the Shower','https://open.spotify.com/user/spotify/playlist/37i9dQZF1DWSqmBTGDYngZ?si=jowW1GAkRWy1wvtKcEYf0g');
+add_music('12=6|13=6','Intense Studying playlist','https://open.spotify.com/user/spotify/playlist/37i9dQZF1DX8NTLI2TtZa6?si=bcRoPLs9RBOJk3ezRv7oaQ');
+add_music('12=6|13=6','Songs to Sing in the Shower','https://open.spotify.com/user/spotify/playlist/37i9dQZF1DWSqmBTGDYngZ?si=jowW1GAkRWy1wvtKcEYf0g');
 
 //Love results
 
@@ -348,12 +348,11 @@ add_food('12=7|13=7','chocolate-bar','Dark chocolate helps reduce stress and low
 add_food('12=7|13=7','apple','Whole fruits like mangoes are appatizing and healthy which helps reduce stress and sadness levels.');
 add_food('12=7|13=7','tea','Sipping green tea is very helpful.');
 
-add_video('12=0|13=0','Motivational video','https://youtu.be/T6Wufigr1p4');
-add_video('12=0|13=0','Best Love songs','https://youtu.be/woSCgIhRl9s');
+add_video('12=7|13=7','Motivational video','https://youtu.be/T6Wufigr1p4');
+add_video('12=7|13=7','Best Love songs','https://youtu.be/woSCgIhRl9s');
 
-add_music('12=0|13=0','Good Vibes playlist','https://open.spotify.com/user/spotify/playlist/37i9dQZF1DWYBO1MoTDhZI?si=a7MNsgWQRYCKMtKukoyVoA');
-add_music('12=0|13=0','Forever Mine playlist','https://open.spotify.com/user/spotify/playlist/37i9dQZF1DWWCKk94npRDB?si=pQYczBo5SWWJjHQfirdoow');
-
+add_music('12=7|13=7','Good Vibes playlist','https://open.spotify.com/user/spotify/playlist/37i9dQZF1DWYBO1MoTDhZI?si=a7MNsgWQRYCKMtKukoyVoA');
+add_music('12=7|13=7','Forever Mine playlist','https://open.spotify.com/user/spotify/playlist/37i9dQZF1DWWCKk94npRDB?si=pQYczBo5SWWJjHQfirdoow');
 
 // TODO: colors and also subtitle for emotion-specific questions
 
