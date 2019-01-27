@@ -91,6 +91,7 @@ class SubmitActionHandler implements ActionHandler {
 			// Now we clear their session
 			unset($_SESSION['currentQuestion']);
 			unset($_SESSION['answers']);
+			unset($_SESSION['pos']);
 
 			return $response;
 		}
@@ -104,6 +105,25 @@ class SubmitActionHandler implements ActionHandler {
 
 }
 
+class SetPositionActionHandler implements ActionHandler {
+
+	public function invoke($data) {
+		session_start();
+
+		if (!array_key_exists('longitude', $data)
+				|| !array_key_exists('latitude', $data)) {
+			return make_error_response_raw(ErrorCode::INVALID_REQUEST, 'Lacking longitude and/or latitude params');
+		}
+
+		$_SESSION['pos'] = $data['latitude'] . ',' . $data['longitude'];
+		return [
+			'success' => true
+		];
+	}
+
+}
+
 // Register action handlers
-Actions::registerActionHandler('start', new StartActionHandler(null));
-Actions::registerActionHandler('submit', new SubmitActionHandler(null));
+Actions::registerActionHandler('start', new StartActionHandler());
+Actions::registerActionHandler('submit', new SubmitActionHandler());
+Actions::registerActionHandler('set-pos', new SetPositionActionHandler());

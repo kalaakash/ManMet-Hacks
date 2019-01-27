@@ -76,6 +76,7 @@ body.color-white h1, body.color-white h2 { text-shadow: none; }
 body.color-green { background: #4ad48e; color: #EEEEEE; }
 /*body.color-green .btn--primary { background: #916fc5; box-shadow: 0 3px 0 #7b6482; }*/
 body.color-red { background: #e74c3c; color: #EEEEEE; }
+body.color-blue { background: #4ac6d4; color: #EEEEEE; }
 /*body.color-green .btn--primary { background: rgba(0, 0, 0, 0.4); box-shadow: 0 3px 0 #7b6482; }*/
 
 /**
@@ -223,6 +224,14 @@ button.btn--primary:active {
 	animation: slide-out 0.7s ease-in-out;
 	transform: translateX(-100%);
 	pointer-events: none; /* Don't mess with the answer after submitted! */
+}
+
+/* This is a bad hack currently, due to constraints in the server-client
+   communications meaning that it isn't possible to include image URLs.
+   The solution is including an entire image tag in the title */
+.slide h2 img {
+	max-width: 100%;
+	margin-top: 1em;
 }
 
 /**

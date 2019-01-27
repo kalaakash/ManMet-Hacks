@@ -31,7 +31,8 @@ var Backend = (function() {
 	// Local consts
 	var API_PATH = 'api.php',
 		  API_PATH_START = API_PATH + '?action=start',
-		  API_PATH_SUBMIT = API_PATH + '?action=submit';
+		  API_PATH_SUBMIT = API_PATH + '?action=submit',
+		  API_PATH_SET_POS = API_PATH + '?action=set-pos';
 
 	function ajaxRequest(method, url, data, callback) {
 		var req = new XMLHttpRequest();
@@ -159,6 +160,22 @@ var Backend = (function() {
 			// 		}
 			// 	]
 			// ), 'white');
+		},
+
+		sendPosition: function(longitude, latitude) {
+			var request = 'longitude=' + encodeURI(longitude) + '&latitude=' + encodeURI(latitude);
+			ajaxRequest('POST', API_PATH_SET_POS, request, function(data) {
+				console.log(data);
+				var response = JSON.parse(data);
+
+				if (!data || !response || response.error) {
+					console.log('Error while setting pos: ' + data);
+					return;
+				}
+
+				if (data.success)
+					console.log('Set pos successfully');
+			});
 		}
 	};
 
@@ -411,7 +428,8 @@ var Slides = (function() {
 					spanElem = document.createElement('span'),
 					titleElem = document.createElement('b'),
 					subtitleElem = document.createElement('i'),
-					descElem = document.createElement('p');
+					descElem = document.createElement('p'),
+					linkElem = document.createElement('a');
 
 			iconElem.src = 'images/icons8-' + place.icon + '-100.png';
 			titleElem.setAttribute('class', 'place__title');
@@ -424,6 +442,13 @@ var Slides = (function() {
 			spanElem.appendChild(titleElem);
 			spanElem.appendChild(subtitleElem);
 			spanElem.appendChild(descElem);
+
+			if (place.url) {
+				linkElem.textContent = 'See on map';
+				linkElem.target = '_blank';
+				linkElem.href = place.url;
+				spanElem.appendChild(linkElem);
+			}
 
 			itemElem.appendChild(iconElem);
 			itemElem.appendChild(spanElem);
@@ -598,5 +623,29 @@ var Events = (function() {
 	}
 })();
 
+var Geolocation = (function() {
+	function onGotPosition(pos) {
+		Backend.sendPosition(pos.coords.longitude, pos.coords.latitude);
+	}
+
+	function onError(err) {
+
+	}
+
+	return {
+		setup: function() {
+			if (!('geolocation' in navigator))
+				console.log('Geolocation disabled');
+			
+			navigator.geolocation.getCurrentPosition(
+				onGotPosition,
+				onError,
+				{ enableHighAccuracy: true, timeout: 5000 }
+			);
+		}
+	}
+})();
+
 Events.setupListeners();
 Events.setupFirstSlide();
+Geolocation.setup();
