@@ -111,12 +111,46 @@ var Backend = (function() {
 						type: 'FOOD',
 						foods: [
 							{
-								icon: 'berries',
+								icon: 'raspberry',
 								text: 'Berries can reduce blood pressure and are part of your five-a-day.'
 							},
 							{
 								icon: 'tea',
 								text: 'Green tea is soothing when sipped, and can ease stress.'
+							}
+						]
+					},
+					{
+						type: 'PLACES',
+						places: [
+							{
+								icon: 'small-business',
+								title: 'Supermarket',
+								subtitle: 'Joe\'s Local Greens (3 mi)',
+								description: 'Pick up some nice food for yourself',
+								url: 'https://google.com/maps'
+							},
+							{
+								icon: 'small-business',
+								title: 'Supermarket',
+								subtitle: 'Joe\'s Local Greens',
+								description: 'Pick up some nice food for yourself',
+								url: 'https://google.com/maps'
+							}
+						]
+					},
+					{
+						type: 'VIDEOS',
+						videos: [
+							{
+								icon: 'play-button',
+								url: 'https://youtu.be/dQw4w9WgXcQ',
+								title: 'Funny Cat Video'
+							},
+							{
+								icon: 'play-button',
+								url: 'https://youtu.be/dQw4w9WgXcQ',
+								title: 'Nothing Suspicious'
 							}
 						]
 					}
@@ -344,10 +378,79 @@ var Slides = (function() {
 		var container = createComponentContainer('Food', 'Mood is strongly associated with diet and consumption. Here are some foods we\'d suggest trying:'),
 				listElem = document.createElement('ul');
 
-		listElem.setAttribute('class', 'food-list');
+		listElem.setAttribute('class', 'icon-list');
 		component.foods.map(function(food) {
-			var itemElem = document.createElement('li');
-			var iconElem = document.createElement('span');
+			var itemElem = document.createElement('li'),
+					iconElem = document.createElement('img'),
+					spanElem = document.createElement('span');
+
+			iconElem.src = 'images/icons8-' + food.icon + '-50.png';
+			spanElem.textContent = food.text;
+
+			itemElem.appendChild(iconElem);
+			itemElem.appendChild(spanElem);
+			listElem.appendChild(itemElem);
+		});
+
+		container.appendChild(listElem);
+		return container;
+	}
+
+	function createComponentPlaces(component) {
+		var container = createComponentContainer('Places', 'We suggest visiting places such as these:'),
+				listElem = document.createElement('ul');
+
+		listElem.setAttribute('class', 'icon-list big-icon-list');
+		component.places.forEach(function(place) {
+			var itemElem = document.createElement('li'),
+					iconElem = document.createElement('img'),
+					spanElem = document.createElement('span'),
+					titleElem = document.createElement('b'),
+					subtitleElem = document.createElement('i'),
+					descElem = document.createElement('p');
+
+			iconElem.src = 'images/icons8-' + place.icon + '-100.png';
+			titleElem.setAttribute('class', 'place__title');
+			titleElem.textContent = place.title;
+			subtitleElem.setAttribute('class', 'place__subtitle');
+			subtitleElem.textContent = place.subtitle;
+			descElem.setAttribute('class', 'place__desc');
+			descElem.textContent = place.description;
+
+			spanElem.appendChild(titleElem);
+			spanElem.appendChild(subtitleElem);
+			spanElem.appendChild(descElem);
+
+			itemElem.appendChild(iconElem);
+			itemElem.appendChild(spanElem);
+			listElem.appendChild(itemElem);
+		});
+
+		container.appendChild(listElem);
+
+		return container;
+	}
+
+	function createComponentVideos(component) {
+		var container = createComponentContainer('Videos', 'Visual stimulation can improve mood and provide entertainment. Here\'s some of our picks.'),
+				listElem = document.createElement('ul');
+
+		listElem.setAttribute('class', 'icon-list big-icon-list video-list');
+		component.videos.forEach(function(video) {
+			var itemElem = document.createElement('li'),
+					linkElem = document.createElement('a'),
+					iconElem = document.createElement('img'),
+					spanElem = document.createElement('span');
+
+			linkElem.href = video.url;
+			spanElem.textContent = video.title;
+
+			iconElem.src = 'images/icons8-' + video.icon + '-100.png';
+
+			linkElem.appendChild(iconElem);
+			linkElem.appendChild(spanElem);
+			itemElem.appendChild(linkElem);
+			listElem.appendChild(itemElem);
 		});
 
 		container.appendChild(listElem);
@@ -373,6 +476,12 @@ var Slides = (function() {
 					break;
 				case 'FOOD':
 					center.appendChild(createComponentFood(component));
+					break;
+				case 'PLACES':
+					center.appendChild(createComponentPlaces(component));
+					break;
+				case 'VIDEOS':
+					center.appendChild(createComponentVideos(component));
 					break;
 			}
 		});

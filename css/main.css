@@ -18,6 +18,15 @@
 }
 
 /**
+ * Responsiveness
+ */
+@media screen and (max-width: 480px) {
+	body {
+		font-size: 20px!important;
+	}
+}
+
+/**
  * General styles
  */
 * { box-sizing: border-box; }
@@ -224,7 +233,6 @@ button.btn--primary:active {
 
 .slide ul.options li button {
 	width: 100%;
-	min-width: 300px;
 	max-width: 600px;
 
 	box-shadow: none;
@@ -272,4 +280,59 @@ button.btn--primary:active {
 
 .component li:last-child {
 	margin-bottom: 0;
+}
+
+.component ul.icon-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.component ul.icon-list li {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+}
+
+.component ul.icon-list li img {
+	width: 1.3em;
+	height: 1.3em;
+	margin-right: 0.5em;
+}
+
+.component ul.big-icon-list li img {
+	width: 1.8em;
+	height: 1.8em;
+}
+
+.component .place__title,
+.component .place__subtitle,
+.component .place__description {
+	display: block;
+}
+
+.component ul.icon-list.video-list li {
+	align-items: center;
+}
+
+.component ul.video-list li a {
+	text-decoration: none;
+	color: #333;
+
+	width: 100%;
+	height: 3.5em;
+	display: flex;
+	align-items: center;
+
+	border: 1px solid #CCC;
+	border-radius: 3px;
+	padding: 0 1em;
+}
+
+.component ul.video-list li span {
+	display: block;
+}
+
+.component ul.video-list li a > * {
+	float: left;
 }
