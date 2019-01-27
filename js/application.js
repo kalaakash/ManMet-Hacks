@@ -71,6 +71,9 @@ var Backend = (function() {
 			case Slides.SlideType.SELECTION_SLIDE:
 				slide = new Slides.SelectionSlide(response.question, response.answers);
 				break;
+			case Slides.SlideType.RANGE_SLIDE:
+				slide = new Slides.RangeSlide(response.question, response.min, response.max);
+				break;
 			default:
 				console.log('Error: unrecognized slide type!');
 		}
@@ -86,11 +89,39 @@ var Backend = (function() {
 			});
 		},
 		submitAnswer: function(answer, callback) {
-			var request = 'answer=' + encodeURI(answer);
-			ajaxRequest('POST', API_PATH_SUBMIT, request, function(data) {
-				handleSlideData(data, callback);
-			});
-			// callback(new Slides.RangeSlide('Why do they say it be like it do?', 1, 10));
+			//[DEBUG] TODO uncomment this
+			// var request = 'answer=' + encodeURI(answer);
+			// ajaxRequest('POST', API_PATH_SUBMIT, request, function(data) {
+			// 	handleSlideData(data, callback);
+			// });
+			callback(new Slides.ResultsSlide(
+				'Here\'s your results',
+				'Our AI has computed your results, and we think you\'ll like these suggestions',
+				[
+					{
+						type: 'TIPS',
+						tips: [
+							'Drink more water',
+							'Stay hydrated',
+							'Ensure your cells have a good supply of H2O',
+							'Consume electrolytes'
+						]
+					},
+					{
+						type: 'FOOD',
+						foods: [
+							{
+								icon: 'berries',
+								text: 'Berries can reduce blood pressure and are part of your five-a-day.'
+							},
+							{
+								icon: 'tea',
+								text: 'Green tea is soothing when sipped, and can ease stress.'
+							}
+						]
+					}
+				]
+			), 'white');
 		}
 	};
 
@@ -265,6 +296,90 @@ var Slides = (function() {
 		Events.onAnswerQuestion(num);
 	}
 
+	/** ResultsSlide::constructor */
+	var ResultsSlide = function(title, description, components) {
+		Slide.call(this, SlideType.RESULTS);		
+
+		this.title = title;
+		this.description = description;
+		this.components = components;
+	}
+
+	ResultsSlide.prototype = Object.create(Slide.prototype);
+
+	function createComponentContainer(title, description) {
+		var container = document.createElement('div');
+		container.setAttribute('class', 'component');
+
+		var titleElem = document.createElement('h3');
+		titleElem.textContent = title;
+		container.appendChild(titleElem);
+
+		if (description) {
+			var descElem = document.createElement('p');
+			descElem.textContent = description;
+			container.appendChild(descElem);
+		}
+
+		return container;
+	}
+
+	function createComponentTips(component) {
+		var container = createComponentContainer('Tips', null);
+		var tipsList = document.createElement('ul');
+
+		// Create list items for each tip
+		component.tips.forEach(function(tip) {
+			var tipElem = document.createElement('li');
+			tipElem.textContent = tip;
+			tipsList.appendChild(tipElem);
+		});
+
+		container.appendChild(tipsList);
+
+		return container;
+	}
+
+	function createComponentFood(component) {
+		var container = createComponentContainer('Food', 'Mood is strongly associated with diet and consumption. Here are some foods we\'d suggest trying:'),
+				listElem = document.createElement('ul');
+
+		listElem.setAttribute('class', 'food-list');
+		component.foods.map(function(food) {
+			var itemElem = document.createElement('li');
+			var iconElem = document.createElement('span');
+		});
+
+		container.appendChild(listElem);
+		return container;
+	}
+
+	ResultsSlide.prototype.createElement = function() {
+		var container = Slide.prototype.createElement.call(this),
+				center = container.querySelector('.slide__center');
+
+		var title = document.createElement('h2');
+		title.textContent = this.title;
+		center.appendChild(title);
+
+		var description = document.createElement('p');
+		description.textContent = this.description;
+		center.appendChild(description);
+
+		this.components.forEach(function(component) {
+			switch (component.type) {
+				case 'TIPS':
+					center.appendChild(createComponentTips(component));
+					break;
+				case 'FOOD':
+					center.appendChild(createComponentFood(component));
+					break;
+			}
+		});
+
+		return container;
+	}
+
 	/** static switchSlide(Slide slide) */
 	var switchSlide = function(slide) {
 		var newSlideFragment = document.createDocumentFragment();
@@ -299,6 +414,7 @@ var Slides = (function() {
 		Slide: Slide,
 		SelectionSlide: SelectionSlide,
 		RangeSlide: RangeSlide,
+		ResultsSlide: ResultsSlide,
 
 		// Static methods
 		switchSlide: switchSlide

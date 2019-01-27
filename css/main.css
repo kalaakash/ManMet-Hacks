@@ -23,7 +23,7 @@
 * { box-sizing: border-box; }
 
 body {
-	font-family: 'Source Sans Pro', 'Droid Sans', 'Open Sans', 'Ubuntu', sans-serif;
+	font-family: 'Open Sans', 'Ubuntu', sans-serif;
 	font-size: 30px;
 	line-height: 1.5em;
 	color: #333333;
@@ -85,11 +85,14 @@ button.active {
 
 button.btn--primary {
 	box-shadow: 0 3px 0 rgba(0, 0, 0, 0.5);
+	margin-bottom: 3px;
 }
 
 button.btn--primary:active {
-	transform: translateY(3px);
+	/*transform: translateY(3px);*/
 	box-shadow: none;
+	margin-bottom: 0;
+	margin-top: 3px;
 }
 
 /**
@@ -156,6 +159,13 @@ button.btn--primary:active {
 	align-items: center;
 	justify-content: center;
 	text-align: center;
+
+	/* Overflow */
+	overflow: auto;
+}
+
+.slide .slide__center {
+	overflow: auto;
 }
 
 .slide h1,
@@ -177,6 +187,7 @@ button.btn--primary:active {
 	font-size: 2em;
 	font-weight: 700;
 	padding-bottom: 0.7em;
+	line-height: 1.2em;
 }
 
 .sliding-in {
@@ -217,4 +228,48 @@ button.btn--primary:active {
 	max-width: 600px;
 
 	box-shadow: none;
+}
+
+/**
+ * Components (results page)
+ */
+.component {
+	background: white;
+	color: #333;
+
+	box-sizing: border-box;
+	padding: 1em;
+	margin: 1em 1em;
+
+	text-align: left;
+}
+
+.component h3 {
+	text-shadow: none;
+	margin: 0;
+	margin-bottom: 0.8em;
+	padding: 0;
+}
+
+.component p {
+	padding: 0;
+	margin: 0;
+	margin-bottom: 1em;
+}
+
+.component p:last-child {
+	margin-bottom: 0;
+}
+
+.component ul {
+	color: #666;
+	margin: 0;
+}
+
+.component li {
+	margin-bottom: 0.6em;
+}
+
+.component li:last-child {
+	margin-bottom: 0;
 }
