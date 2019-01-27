@@ -1,5 +1,6 @@
 <?php
 
+require_once('data.php');
 require_once('errors.php');
 require_once('questions.php');
 
@@ -78,12 +79,20 @@ class SubmitActionHandler implements ActionHandler {
 
 		// Get & return next question based on answer
 		$nextQuestion = QuestionRegistry::getNextQuestion($currentId, $data['answer']);
+		$_SESSION['currentQuestion'] = 2; // BIG TODO
 
+		// If we have no next question, this means we've reached a terminal question:
+		// determine and return their results!
 		if (!$nextQuestion) {
-			// TODO: take to results
-			return [
-				type => 'RESULTS'
-			];
+			$gen = new ResultsGenerator($_SESSION['answers']);
+			$response = $gen->generate();
+			$response['type'] = 'RESULTS';
+
+			// Now we clear their session
+			unset($_SESSION['currentQuestion']);
+			unset($_SESSION['answers']);
+
+			return $response;
 		}
 
 		return $nextQuestion->toArray();

@@ -74,6 +74,9 @@ var Backend = (function() {
 			case Slides.SlideType.RANGE_SLIDE:
 				slide = new Slides.RangeSlide(response.question, response.min, response.max);
 				break;
+			case Slides.SlideType.RESULTS_SLIDE:
+				slide = new Slides.ResultsSlide(response.title, response.description, response.components);
+				break;
 			default:
 				console.log('Error: unrecognized slide type!');
 		}
@@ -90,72 +93,72 @@ var Backend = (function() {
 		},
 		submitAnswer: function(answer, callback) {
 			//[DEBUG] TODO uncomment this
-			// var request = 'answer=' + encodeURI(answer);
-			// ajaxRequest('POST', API_PATH_SUBMIT, request, function(data) {
-			// 	handleSlideData(data, callback);
-			// });
-			callback(new Slides.ResultsSlide(
-				'Here\'s your results',
-				'Our AI has computed your results, and we think you\'ll like these suggestions',
-				[
-					{
-						type: 'TIPS',
-						tips: [
-							'Drink more water',
-							'Stay hydrated',
-							'Ensure your cells have a good supply of H2O',
-							'Consume electrolytes'
-						]
-					},
-					{
-						type: 'FOOD',
-						foods: [
-							{
-								icon: 'raspberry',
-								text: 'Berries can reduce blood pressure and are part of your five-a-day.'
-							},
-							{
-								icon: 'tea',
-								text: 'Green tea is soothing when sipped, and can ease stress.'
-							}
-						]
-					},
-					{
-						type: 'PLACES',
-						places: [
-							{
-								icon: 'small-business',
-								title: 'Supermarket',
-								subtitle: 'Joe\'s Local Greens (3 mi)',
-								description: 'Pick up some nice food for yourself',
-								url: 'https://google.com/maps'
-							},
-							{
-								icon: 'small-business',
-								title: 'Supermarket',
-								subtitle: 'Joe\'s Local Greens',
-								description: 'Pick up some nice food for yourself',
-								url: 'https://google.com/maps'
-							}
-						]
-					},
-					{
-						type: 'VIDEOS',
-						videos: [
-							{
-								icon: 'play-button',
-								url: 'https://youtu.be/dQw4w9WgXcQ',
-								title: 'Funny Cat Video'
-							},
-							{
-								icon: 'play-button',
-								url: 'https://youtu.be/dQw4w9WgXcQ',
-								title: 'Nothing Suspicious'
-							}
-						]
-					}
-				]
-			), 'white');
+			var request = 'answer=' + encodeURI(answer);
+			ajaxRequest('POST', API_PATH_SUBMIT, request, function(data) {
+				handleSlideData(data, callback);
+			});
+			// callback(new Slides.ResultsSlide(
+			// 	'Here\'s your results',
+			// 	'Our AI has computed your results, and we think you\'ll like these suggestions',
+			// 	[
+			// 		{
+			// 			type: 'TIPS',
+			// 			tips: [
+			// 				'Drink more water',
+			// 				'Stay hydrated',
+			// 				'Ensure your cells have a good supply of H2O',
+			// 				'Consume electrolytes'
+			// 			]
+			// 		},
+			// 		{
+			// 			type: 'FOOD',
+			// 			foods: [
+			// 				{
+			// 					icon: 'raspberry',
+			// 					text: 'Berries can reduce blood pressure and are part of your five-a-day.'
+			// 				},
+			// 				{
+			// 					icon: 'tea',
+			// 					text: 'Green tea is soothing when sipped, and can ease stress.'
+			// 				}
+			// 			]
+			// 		},
+			// 		{
+			// 			type: 'PLACES',
+			// 			places: [
+			// 				{
+			// 					icon: 'small-business',
+			// 					title: 'Supermarket',
+			// 					subtitle: 'Joe\'s Local Greens (3 mi)',
+			// 					description: 'Pick up some nice food for yourself',
+			// 					url: 'https://google.com/maps'
+			// 				},
+			// 				{
+			// 					icon: 'small-business',
+			// 					title: 'Supermarket',
+			// 					subtitle: 'Joe\'s Local Greens',
+			// 					description: 'Pick up some nice food for yourself',
+			// 					url: 'https://google.com/maps'
+			// 				}
+			// 			]
+			// 		},
+			// 		{
+			// 			type: 'VIDEOS',
+			// 			videos: [
+			// 				{
+			// 					icon: 'play-button',
+			// 					url: 'https://youtu.be/dQw4w9WgXcQ',
+			// 					title: 'Funny Cat Video'
+			// 				},
+			// 				{
+			// 					icon: 'play-button',
+			// 					url: 'https://youtu.be/dQw4w9WgXcQ',
+			// 					title: 'Nothing Suspicious'
+			// 				}
+			// 			]
+			// 		}
+			// 	]
+			// ), 'white');
 		}
 	};
 
@@ -182,7 +185,8 @@ var Slides = (function() {
 	var SlideType = {
 		//QUESTION_SLIDE: 1,
 		SELECTION_SLIDE: 'SELECTION',
-		RANGE_SLIDE: 'RANGE'
+		RANGE_SLIDE: 'RANGE',
+		RESULTS_SLIDE: 'RESULTS'
 	};
 
 	/** Slide::constructor(SlideType type) */
@@ -227,7 +231,7 @@ var Slides = (function() {
 
 		// Create title containing the question we're asking
 		var title = document.createElement('h2');
-		title.textContent = this.question;
+		title.innerHTML = this.question;
 		center.appendChild(title);
 
 		// Create list of options
