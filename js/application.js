@@ -486,6 +486,13 @@ var Slides = (function() {
 			}
 		});
 
+		var footerElem = document.createElement('footer');
+		footerElem.innerHTML = '<a href="https://icons8.com/material-icons">Icons from Icons8</a> &middot;'
+		+ ' Suggestions do not constitute medical advice and we accept no liability for any adverse effects.'
+		+ ' Please seek professional help if issues are affecting your daily life.'
+		+ '<br>If you are having suicidal thoughts, please <a href="https://www.nhs.uk/conditions/suicide/">talk to someone</a>.';
+		center.appendChild(footerElem);
+
 		return container;
 	}
 
