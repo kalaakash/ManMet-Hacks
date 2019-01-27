@@ -88,7 +88,6 @@ class ResultsGenerator {
 			foreach ($places as $i => $place) {
 				$response = $api->findPlaceFromText($place['title'], $ourLat, $ourLon);
 				if ($response->status !== 'OK') {
-					var_dump($response);
 					break;
 				}
 
@@ -233,7 +232,7 @@ add_tips('12=1|13=1', ['Eat comforting food to relax yourself.']);
 
 add_food('12=1|13=1','raspberry','Berries are useful to reduce blood pressure and is very healthy.');
 add_food('12=1|13=1','chocolate-bar','Dark chocolate helps reduce stress and lowers blood pressure.');
-add_food('12=1|13=1','steak','Proteins are very healthy and relieves stress.');
+add_food('12=1|13=1',' beef','Proteins are very healthy and relieves stress.');
 
 add_video('12=1|13=1','Stress-releiving music video','https://www.youtube.com/watch?v=b7IrNtS2rRE');
 add_video('12=1|13=1','Guided Meditation video','https://www.youtube.com/watch?v=4EaMJOo1jks');
@@ -290,7 +289,7 @@ add_tips('27=0', ['Go to your happy place and ignore the negativity around yours
 					'Focus on your hobbies and interests which will engage you in another activity.']);
 add_tips('28=0&29=0', ['Look into booking an appointment with the nearest GP, who\'s name is given below.']);
 
-add_food('12=4|13=4','steak','Proteins are very healthy and relieves stress.');
+add_food('12=4|13=4',' beef','Proteins are very healthy and relieves stress.');
 add_food('12=4|13=4','apple','Whole fruits are appatizing and healthy which helps reduce stress and sadness levels.');
 add_food('12=4|13=4','natural-food','Green, leafy vegetables are very healthy and keeps you going.');
 
