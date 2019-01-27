@@ -24,7 +24,7 @@ class Actions {
 			$responseData = $handler->invoke($data);
 			return json_encode($responseData);
 		} catch (Exception $ex) {
-			return make_error_response(ErrorCode::INTERNAL_ERROR, 'An internal error occurred');
+			return make_error_response(ErrorCode::INTERNAL_ERROR, 'An internal error occurred: ' . $ex->getMessage());
 		}
 	}
 
@@ -51,6 +51,7 @@ class StartActionHandler implements ActionHandler {
 		}
 
 		$currentQuestion = QuestionRegistry::getQuestion($_SESSION['currentQuestion']);
+		session_commit();
 		return $currentQuestion->toArray();
 	}
 
@@ -68,8 +69,11 @@ class SubmitActionHandler implements ActionHandler {
 		session_start();
 
 		if (!array_key_exists('currentQuestion', $_SESSION)) {
+			// Errrrr, assuuuuuuume they're starting?
+			$_SESSION['currentQuestion'] = 0;
+			$_SESSION['answers'] = [];
 			// We have no key for the current question, so they're starting anew
-			return make_error_response_raw(ErrorCode::INVALID_STATE, 'A session must be started before submitting answers');
+			// return make_error_response_raw(ErrorCode::INVALID_STATE, 'A session must be started before submitting answers');
 		}
 
 		$currentId = $_SESSION['currentQuestion'];
