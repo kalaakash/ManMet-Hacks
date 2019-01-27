@@ -1,24 +1,26 @@
 Mood : Disgust
 
 Questions :
-Have you recently found something offensive, distasteful, or unpleasant?
-2. Was it from a taste which was either perceived or imagined?
-(If previous question was no)Could you have obsessive-compulsive disorder (OCD), anorexia or bulimia?
-(If yes)Do you think the item could be disease-ridden?
-3.Have you felt any nausea or an urge to throw up recently?
+1. Have you recently found something offensive, distasteful, or unpleasant?
+2. Could you have obsessive-compulsive disorder (OCD), anorexia or bulimia?
+3. Have you felt any nausea or an urge to throw up recently?
 
 Solutions :
 
-Calm yourself down by deep breathing and meditation.
-Go to your happy place and ignore the negativity around yourself.
-(If Q2. was true)Look into going to a nearby supermarket where you could get clean & fresh food.
-Try soothing yourself by taking your mind of the issue.
-Focus on your hobbies and interests which will engage you in another activity.
-(If Q3. was true)look into booking an appointment with the nearest GP, who's name is given below.
+1. (Q1 = true & Q3 = true)Calm yourself down by deep breathing and meditation.
+2. (Q1 = true )           Go to your happy place and ignore the negativity around yourself.
+3. (Q1 = true & Q3 = true)Look into going to a nearby supermarket where you could get clean & fresh food.
+4. (Q1 = true )           Try soothing yourself by taking your mind of the issue.
+5. (Q1 = true )           Focus on your hobbies and interests which will engage you in another activity.
+6. (Q2 = true & Q3 = true) Look into booking an appointment with the nearest GP, who's name is given below.
 
-Food : Clean & fresh food from nearby supermarkets might be helpful.
+Food : Clean & fresh food from nearby supermarkets might be helpful. Have leafy veggies and proteins to gain energy and metal stability again.
+
 Places: Nearest supermarket, GP.
-Events: Events near me
-Videos: https://www.youtube.com/watch?v=M3VfUmO8ehw, https://www.youtube.com/watch?v=1ZYbU82GVz4, https://www.youtube.com/watch?v=r5aD9iqdFFI
-Music: https://open.spotify.com/user/spotify/playlist/37i9dQZF1DWZeKCadgRdKQ?si=DrtzWR51SZqobTth42n7nw ,
-https://open.spotify.com/user/spotify/playlist/37i9dQZF1DX7KNKjOK0o75?si=PdvFIxF9RIGnOWAyeK-Vog
+
+Videos: https://www.youtube.com/watch?v=M3VfUmO8ehw (Satisfying video on odd objects)
+https://www.youtube.com/watch?v=1ZYbU82GVz4 (Relaxing meditation video)
+https://www.youtube.com/watch?v=r5aD9iqdFFI (ASMR satisfaction video)
+
+Music: https://open.spotify.com/user/spotify/playlist/37i9dQZF1DWZeKCadgRdKQ?si=DrtzWR51SZqobTth42n7nw (Deep focus playlist)
+https://open.spotify.com/user/spotify/playlist/37i9dQZF1DX7KNKjOK0o75?si=PdvFIxF9RIGnOWAyeK-Vog (Have a great day)

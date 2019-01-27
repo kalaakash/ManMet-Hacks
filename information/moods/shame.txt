@@ -1,15 +1,26 @@
 Mood : Shame
 
 Questions :
-
+1. Did you do something to embarrass yourself?
+2. Are you too self-aware or expect yourself to have a high self-esteem?
+3. Do you have high standards and expectations, and if you fail to achieve them, blame yourself?
 
 Solutions :
 
-Calm yourself down by deep breathing and meditation.
-Go to your happy place and ignore the negativity concerning yourself.
+(Q1 = true)              1. It is completely normal to feel shame.
+(Q1 = true or Q2 = true) 2. Calm yourself down by deep breathing and meditation.
+(Q2 = true or Q3 = true) 3. Ignore the negativity concerning yourself and focus on your previous positive growth.
+(Q3 = true)              4. No emotion lasts forever, you need to alter the standards, or rules and if none have been violated, then don't worry about shame.
+(Q2 = true or Q3 = true) 5. Avoid the self-blame game.
 
-Food :
-Places:
-Events:
-Videos:
-Music:
+
+Food : Do not over-eat due to stress. Eat whole-grain cereal with low-fat milk.
+Have fresh fruits and veggies. Look to avoid food which makes you gain weight.
+
+Places: Supermarket, park, coffee shop. 
+
+Videos: (Meme video as a distraction) https://www.youtube.com/watch?v=Je3vDBqGgL0,
+
+
+Music: https://open.spotify.com/user/spotify/playlist/37i9dQZF1DX4pUKG1kS0Ac?si=yPd_Bc64RTeIqG26kgbMpw (Guilty pleasures)
+https://open.spotify.com/user/spotify/playlist/37i9dQZF1DX4fpCWaHOned?si=rV_qu3ykQlOy1tTBP8sXeQ (Confidence booster)

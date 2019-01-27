@@ -2,24 +2,27 @@ Mood : Fear
 
 Questions :
 1. Have you recently come across something that caused you to be insecure or afraid?
-(If no)Have you had this situation for a long time?
-Is there a sense of agitation or anxiety because of an imminent danger?
-Do you believe that you have a phobia (irrational fear) of some sort?
-Do you feel like you can't sleep and have restless nights and feel like you're losing control?
-6. Did you face a panic attack (elevated heart rate, chills, sweating, choking sensation, etc.) till now?
+2. Is there a sense of agitation or anxiety because of an immediate imminent danger?
+3. Do you feel like you can't sleep and have restless nights and feel like you're losing control?
+4. Did you face a panic attack (elevated heart rate, chills, sweating, choking sensation, etc.) till now?
 
 Solutions :
 
-Calm yourself down by deep breathing and meditation.
-Go to your happy place and ignore the negativity around yourself.
-(if Q6. is true)Go to the GP to get yourself check, after booking an appointment.
-Try relaxing by taking your mind of the fear, by focusing on hobbies or interests.
-Eat comforting food to relax yourself.
-Do a meditation or breathing exercises.
+(Q1 = true and Q3 = true) Calm yourself down by deep breathing and meditation.
+(Q1 = true and Q2 = true) Go to your happy place and ignore the negativity around yourself.
+(Q1 = true and Q4 = true) Go to the GP to get yourself check, after booking an appointment.
+(Q1 = true and Q3 = true) Try relaxing by taking your mind of the fear, by focusing on hobbies or interests.
+(Q1 = true and Q3 = true) Do a meditation or breathing exercises.
+(Q1 = false)              Overcome phobias by venturing out and exploring your true self.
+(Either way)              Eat comforting food to relax yourself.
 
 Food : Dark chocolates, berries, proteins like fish or leafy vegetables which can be bought at a nearby supermarket.
-Places: Nearest supermarket, GP,
-Events: Events near me
-Videos: https://www.youtube.com/watch?v=Je3vDBqGgL0 (meme), https://www.youtube.com/watch?v=4EaMJOo1jks, https://www.youtube.com/watch?v=b7IrNtS2rRE
-Music: https://open.spotify.com/user/spotify/playlist/37i9dQZF1DWU0ScTcjJBdj?si=bcmaoy64TS6NCYstqrdPjg,
-https://open.spotify.com/user/spotify/playlist/37i9dQZF1DX82pCGH5USnM?si=vfm2FDC6TJegzoD1WfLOJA
+
+Places: Nearest supermarket, GP
+
+Videos: https://www.youtube.com/watch?v=Je3vDBqGgL0 (Meme video)
+https://www.youtube.com/watch?v=4EaMJOo1jks (Guided meditation video)
+https://www.youtube.com/watch?v=b7IrNtS2rRE (Stress-relieving music video)
+
+Music: https://open.spotify.com/user/spotify/playlist/37i9dQZF1DWU0ScTcjJBdj?si=bcmaoy64TS6NCYstqrdPj (Relax & Unwind)
+https://open.spotify.com/user/spotify/playlist/37i9dQZF1DX82pCGH5USnM?si=vfm2FDC6TJegzoD1WfLOJA (Lounge - Soft House)

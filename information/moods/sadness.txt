@@ -1,15 +1,26 @@
 Mood : Sadness
 
 Questions :
-
+1. Has something happened recently to put your mood down?
+2. Are you feeling depressed or feel like hurting yourself?
+3. Do you feel that you have low self-esteem?
 
 Solutions :
 
-Calm yourself down by deep breathing and meditation.
-Go to your happy place and ignore the negativity concerning yourself.
+(Q1 = true or Q2 = true) 1. Calm yourself down by deep breathing and meditation.
+(Q1 = true or Q2 = true or Q3 = true) 2. Go to your happy place and ignore the negativity concerning yourself.
+(Q2 = true) 3. Go and see a GP as soon as possible.
+(Q1 = true or Q3 = true) 4. Relax and listen to more upbeat music or watch funny videos.
+(Q1 = true or Q2 = true) 5. Calm yourself and meditate for sometime.
+(Q1 = true or Q2 = true) 6. Be around people who want to have a conversation with you and whom you feel happy around.
+(Either way)             7. Let go of the bad memories and move on for the best. 
 
-Food :
-Places:
-Events:
-Videos:
-Music:
+Food : Berries, whole fruits and herbal tea.
+
+Places: GP, supermarket, coffee shop, park
+
+Videos: https://www.youtube.com/watch?v=KOgvA98FifU (Best music of 2018)
+https://youtu.be/Je3vDBqGgL0 (Memes video)
+
+Music: https://open.spotify.com/user/spotify/playlist/37i9dQZF1DXcBWIGoYBM5M?si=YhrgXCsZSJSpKrguMdV9Hw (Today's top hits)
+https://open.spotify.com/user/spotify/playlist/37i9dQZF1DXdPec7aLTmlC?si=phPoTuiRRoaeEQQ4WD4fjg (Happy Hits)

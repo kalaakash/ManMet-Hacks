@@ -1,27 +1,30 @@
 Mood : Jealousy
 
 Questions :
-Have you been feeling less self-confident lately?
-Do you feel irritated because of some situation or relationship in your life?
-Are you insecure about someone or something that is dear to you?
-Do you feel jealous of others success who are in a healthy competition with you?
-Are you afraid of something going wrong soon because of your reaction to situations
-which may be clouded because of emotions?
+
+1. Do you feel irritated because of some situation or relationship in your life?
+2. Have you been feeling less self-confident lately?
+3. Are you insecure about someone or something that is dear to you?
+4. Do you feel irritated of others success who are in a healthy competition with you?
 
 Solutions :
 
-Calm yourself down by deep breathing and meditation.
-Go to your happy place and ignore the negativity concerning yourself.
-Look at yourself from an outsider's perspective and compare yourself with how you want to be.
-Eat healthy and filling food.
-Gain self-confidence by looking at the positives in your life and how you can build on them.
-Look to improve yourself and avoid social media as an information source.
-Try to effectively communicate with the person you're having troubles with or try to solve the situation calmly.
+(Q1 = true or Q3 = true or Q4 = true) Calm yourself down by deep breathing and meditation.
+(Q1 = true or Q2 = true or Q4 = true) Go to your happy place and ignore the negativity concerning yourself.
+(Q1 = true or Q3 = true)              Look at yourself from an outsider's perspective and compare yourself with how you want to be.
+(Either way)                          Eat healthy and filling food.
+(Q1 = true or Q2 = true or Q3 = true) Gain self-confidence by looking at the positives in your life and how you can build on them.
+(Q2 = true or Q3 = true)              Avoid social media as an information source.
+(Q3 = true or Q4 = true)              Try to effectively communicate with the person you're having troubles with or try to solve the situation calmly.
+
 
 Food : Dark chocolate, herbal teas and whole fruits are highly recommended.
+
 Places: Visit a coffee shop, relax at a park, visit friends and family who want to have a chat.
 (Park, coffee shop)
-Events: Events near me
-Videos: (memes for distraction) https://www.youtube.com/watch?v=Je3vDBqGgL0, https://www.youtube.com/watch?v=1ZYbU82GVz4
-Music: https://open.spotify.com/user/spotify/playlist/37i9dQZF1DWU0ScTcjJBdj?si=bcmaoy64TS6NCYstqrdPjg,
-https://open.spotify.com/user/spotify/playlist/37i9dQZF1DX82pCGH5USnM?si=vfm2FDC6TJegzoD1WfLOJA
+
+Videos: (Meme video as a distraction) https://www.youtube.com/watch?v=Je3vDBqGgL0,
+https://www.youtube.com/watch?v=1ZYbU82GVz4 (Relaxing sounds and music)
+
+Music: https://open.spotify.com/user/spotify/playlist/37i9dQZF1DWU0ScTcjJBdj?si=bcmaoy64TS6NCYstqrdPjg (Relax and Unwind)
+https://open.spotify.com/user/spotify/playlist/37i9dQZF1DX82pCGH5USnM?si=vfm2FDC6TJegzoD1WfLOJA (Lounge - Soft House)

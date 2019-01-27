@@ -1,12 +1,14 @@
 Mood : Happiness
 
 Questions :
-
+1. How good do you feel about yourself today? (0 to 10)
+2. Do you think you can push you further?
+3. Do you think you have been productive over the past week?
+4. Do you still follow your passions and hobbies?
 
 Solutions :
 
-Calm yourself down by deep breathing and meditation.
-Go to your happy place and ignore the negativity concerning yourself.
+
 
 Food :
 Places:
