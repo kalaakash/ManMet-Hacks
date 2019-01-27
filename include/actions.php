@@ -86,6 +86,7 @@ class SubmitActionHandler implements ActionHandler {
 			$gen = new ResultsGenerator($_SESSION['answers']);
 			$response = $gen->generate();
 			$response['type'] = 'RESULTS';
+			$response['color'] = 'white';
 
 			// Now we clear their session
 			unset($_SESSION['currentQuestion']);

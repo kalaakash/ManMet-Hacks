@@ -24,6 +24,10 @@
 	body {
 		font-size: 20px!important;
 	}
+
+	.slide h2 {
+		font-size: 1.5em!important;
+	}
 }
 
 /**
@@ -179,6 +183,9 @@ button.btn--primary:active {
 
 	/* Overflow */
 	overflow: auto;
+
+	/* Pad */
+	padding: 0 1em;
 }
 
 .slide .slide__center {
