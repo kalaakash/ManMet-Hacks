@@ -309,13 +309,15 @@ add_food('12=4|13=4',' beef','Proteins are very healthy and relieves stress.');
 add_food('12=4|13=4','apple','Whole fruits are appatizing and healthy which helps reduce stress and sadness levels.');
 add_food('12=4|13=4','natural-food','Green, leafy vegetables are very healthy and keeps you going.');
 
+add_place('12=4|13=4', 'small-business', 'Supermarket', 'Buy health/cleaning products, whole fresh fruit/veg');
+add_place('12=4|13=4', 'clinic', 'Doctor\'s', 'If this issue is persistent');
+
 add_video('12=4|13=4','Satisfying video on Odd Objects','https://www.youtube.com/watch?v=M3VfUmO8ehw');
 add_video('12=4|13=4','Relaxing Meditation video','https://www.youtube.com/watch?v=1ZYbU82GVz4');
 add_video('12=4|13=4','ASMR satisfaction video','https://www.youtube.com/watch?v=r5aD9iqdFFI');
 
 add_music('12=4|13=4','Deep Focus playlist','https://open.spotify.com/user/spotify/playlist/37i9dQZF1DWZeKCadgRdKQ?si=DrtzWR51SZqobTth42n7nw');
 add_music('12=4|13=4','Have a Great Day','https://open.spotify.com/user/spotify/playlist/37i9dQZF1DX7KNKjOK0o75?si=PdvFIxF9RIGnOWAyeK-Vog');
-
 
 //Jealous results
 
@@ -330,6 +332,9 @@ add_tips('12=5|13=5', ['Eat healthy and filling food.']);
 add_food('12=5|13=5','chocolate-bar','Dark chocolate helps reduce stress and lowers blood pressure.');
 add_food('12=5|13=5','apple','Whole fruits are appatizing and healthy which helps reduce stress and sadness levels.');
 add_food('12=5|13=5','tea','Sipping green tea is very helpful.');
+
+add_place('12=5|13=5', 'forest', 'Park', 'Sit and relax. Be lost in thought.');
+add_place('12=5|13=5', 'coffee', 'Coffee Shop', 'Refresh with a cup of coffee in a calm environment');
 
 add_video('12=5|13=5','Relaxing sounds & music','https://www.youtube.com/watch?v=1ZYbU82GVz4');
 add_video('12=5|13=5','Funny Memes video','https://www.youtube.com/watch?v=Je3vDBqGgL0');
@@ -347,6 +352,10 @@ add_food('12=6|13=6','chocolate-bar','Dark chocolate helps reduce stress and low
 add_food('12=6|13=6','apple','Whole fruits are appatizing and healthy which helps reduce stress and sadness levels.');
 add_food('12=6|13=6','natural-food','Green, leafy vegetables are very healthy and keeps you going.');
 
+add_place('12=6|13=6', 'shopping-cart', 'Shopping Centre', 'Wander round, meet people, enjoy the vibe');
+add_place('12=6|13=6', 'forest', 'Park', 'Take a walk, go for a run, play some sports');
+add_place('12=6|13=6', 'coffee', 'Coffee Shop', 'Enjoy a rejuvenating cup of coffee');
+
 add_video('12=6|13=6','How to be more Productive','https://www.youtube.com/watch?v=V3WrCx3mwNo');
 add_video('12=6|13=6','Funny Memes video','https://www.youtube.com/watch?v=Je3vDBqGgL0');
 
@@ -362,6 +371,10 @@ add_tips('12=7|13=7', ['Keep looking at life from a positive perspective.']);
 add_food('12=7|13=7','chocolate-bar','Dark chocolate helps reduce stress and lowers blood pressure.');
 add_food('12=7|13=7','apple','Whole fruits like mangoes are appatizing and healthy which helps reduce stress and sadness levels.');
 add_food('12=7|13=7','tea','Sipping green tea is very helpful.');
+
+add_place('12=7|13=7', 'small-business', 'Supermarket', 'Buy something nice for the one you love');
+add_place('12=7|13=7', 'forest', 'Park', 'Take a leisurly stroll');
+add_place('12=7|13=7', 'coffee', 'Coffee Shop', 'Enjoy a cuppa');
 
 add_video('12=7|13=7','Motivational video','https://youtu.be/T6Wufigr1p4');
 add_video('12=7|13=7','Best Love songs','https://youtu.be/woSCgIhRl9s');
