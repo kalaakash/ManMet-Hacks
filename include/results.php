@@ -1,5 +1,7 @@
 <?php
 
+require_once('gcp.php');
+
 class ResultsGenerator {
 
 	private static $mappings = [];
@@ -35,7 +37,22 @@ class ResultsGenerator {
 
 	private function checkEquality($equalityStr) {
 		$parts = explode('=', $equalityStr);
+		if (!array_key_exists($parts[0], $this->answers))
+			return false;
+
 		return $this->answers[intval($parts[0])] === $parts[1];
+	}
+
+	private function calcDistance($lat1, $lon1, $lat2, $lon2) {
+		$radius = 6371;
+		$dLat = deg2rad($lat2 - $lat1);
+		$dLon = deg2rad($lon2 - $lon1);
+		$a = sin($dLat / 2) * sin($dLat / 2)
+			+ cos(deg2rad($lat1)) * cos(deg2rad($lat2))
+			* sin($dLon / 2) * sin($dLon / 2);
+		$c = 2 * atan2(sqrt($a), sqrt(1 - $a));
+		$d = $radius * $c;
+		return $d / 1.6;
 	}
 
 	public function generate() {
@@ -59,6 +76,38 @@ class ResultsGenerator {
 					$music = array_merge($music, $mapping['data']);
 				elseif ($mapping['type'] === 'VIDEOS')
 					$videos = array_merge($videos, $mapping['data']);
+			}
+		}
+
+		// Look for places using Google API if we know a location
+		if (array_key_exists('pos', $_SESSION)) {
+			$ourLat = explode(',', $_SESSION['pos'])[0];
+			$ourLon = explode(',', $_SESSION['pos'])[1];
+			$api = new PlacesAPI(GCP_API_KEY);
+
+			foreach ($places as $i => $place) {
+				$response = $api->findPlaceFromText($place['title'], $ourLat, $ourLon);
+				if ($response->status !== 'OK') {
+					var_dump($response);
+					break;
+				}
+
+				if (count($response->candidates) < 1)
+					break;
+
+				$candidate = $response->candidates[0];
+				$lat = floatval($candidate->geometry->location->lat);
+				$lon = floatval($candidate->geometry->location->lng);
+
+				$distance = $this->calcDistance($ourLat, $ourLon, $lat, $lon);
+
+
+				$place['subtitle'] = $candidate->name . ' (' . number_format($distance, 1) . 'mi)';
+				$place['url'] = 'https://www.google.com/maps/search/?api=1&query='
+					. $lat
+					. ','
+					. $lon;
+				$places[$i] = $place;
 			}
 		}
 
