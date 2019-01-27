@@ -2,21 +2,24 @@ Mood : Happiness
 
 Questions :
 1. How good do you feel about yourself today? (0 to 10)
-2. Do you think you can push you further?
-3. Do you think you have been productive over the past week?
-4. Do you still follow your passions and hobbies?
+2. Do you think you can push further and be more productive than you did over the past week?
+3. Do you still follow your passions and hobbies?
 
 Solutions :
+(Q2 = false) 1. To keep your mood up, go shopping or do something you enjoy.
+(Q2 = true) 2. Go do some work and check if you were more productive than before.
+(Q2 = false) 3.Enjoy yourself in whatever you do.
 
+Food : Eat healthy food to stay fit. Proteins and dark chocolates are good in limited quantities.
+Try eating fresh greens and fruits.
 
+Places: Nearby mall, supermarket, park, coffee shop.
 
-Food :
+Videos: (Memes video) https://youtu.be/Je3vDBqGgL0
+(How to be more productive) https://www.youtube.com/watch?v=V3WrCx3mwNo
 
-Places:
-
-Videos:
-
-Music:
+Music: (Intense studying) https://open.spotify.com/user/spotify/playlist/37i9dQZF1DX8NTLI2TtZa6?si=bcRoPLs9RBOJk3ezRv7oaQ
+(Songs to sing in the shower) https://open.spotify.com/user/spotify/playlist/37i9dQZF1DWSqmBTGDYngZ?si=jowW1GAkRWy1wvtKcEYf0g
 
 Quotes:
 To sit in the shade on a fine day, and look upon vendure is the most perfect refreshment. - Jane Austin
