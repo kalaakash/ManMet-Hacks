@@ -486,6 +486,32 @@ var Slides = (function() {
 		return container;
 	}
 
+	function createComponentMusic(component) {
+		var container = createComponentContainer('Music', 'Songs can be uplifting, relaxing, invigorating. Here\'s a few to try:'),
+				listElem = document.createElement('ul');
+
+		listElem.setAttribute('class', 'icon-list big-icon-list video-list');
+		component.music.forEach(function(music) {
+			var itemElem = document.createElement('li'),
+					linkElem = document.createElement('a'),
+					iconElem = document.createElement('img'),
+					spanElem = document.createElement('span');
+
+			linkElem.href = music.url;
+			spanElem.textContent = music.title;
+
+			iconElem.src = 'images/icons8-spotify-96.png';
+
+			linkElem.appendChild(iconElem);
+			linkElem.appendChild(spanElem);
+			itemElem.appendChild(linkElem);
+			listElem.appendChild(itemElem);
+		});
+
+		container.appendChild(listElem);
+		return container;
+	}
+
 	ResultsSlide.prototype.createElement = function() {
 		var container = Slide.prototype.createElement.call(this),
 				center = container.querySelector('.slide__center');
@@ -511,6 +537,9 @@ var Slides = (function() {
 					break;
 				case 'VIDEOS':
 					center.appendChild(createComponentVideos(component));
+					break;
+				case 'MUSIC':
+					center.appendChild(createComponentMusic(component));
 					break;
 			}
 		});
