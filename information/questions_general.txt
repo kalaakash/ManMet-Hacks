@@ -1,27 +1,31 @@
 Questions General
 
-1. On a scale of 0 to 10, how emotionally stable do you think you are? (0 being least stable and 10 being extremely stable)
+0. On a scale of 0 to 10, how emotionally stable do you think you are? (0 being least stable and 10 being extremely stable)
 0 to 10 options
 
-2. Have you been bothered by moving or speaking so slowly that other people could have noticed,
+1. Have you been bothered by moving or speaking so slowly that other people could have noticed,
 or the opposite - being so fidgety or restless that you have been moving around a lot more than usual?
 
 Yes
 No
 
-3. How are you feeling today?
+2. How are you feeling today?
 Not too good
 Alright
 Good
 Very good
 Amazing
 
-4. How much water have you had today?
+3. How many liters of water have you had today?
 <1
 1-2
 2-3
 3-4
 >4
+
+4. Do you think you should have more water?
+Yes
+No
 
 5. How many hours of sleep did you get in the past 24 hours?
 0-3
@@ -39,23 +43,25 @@ Yes
 No
 
 8. What do you see in the following image?
-Duck (has several emotional impulses, has rapid mood swings & makes abrupt decisions)
-Rabbit (considers the possibility of each outcome, mostly logical, however not cold or insensitive)
+Duck
+Rabbit
 
-9. Do you spend time focusing on yourself and following your passions and hobbies?
+9. As you chose the duck, it describes a person who has several emotional impulses, has rapid mood swings & makes abrupt decisions. Do you spend time focusing on yourself and following your passions and hobbies?
 Yes
 No
 
-10. Have you been bothered by worrying about any of the following?
+10. As you chose rabbit, it describes a person who considers the possibility of each outcome, mostly logical, however not cold or insensitive. Do you spend time focusing on yourself and following your passions and hobbies?
+Yes
+No
+
+11. Have you been bothered by worrying about any of the following?
 Your health, weight, little or no desire for pleasure or sex, difficulties with partner,
 stress at school, work or outside home, financial troubles, no one to turn to, something bad has happened recently.
+Yes
+No
 
 (Retrain your emotions and your reaction to certain situations.
  Using an assessment of yourself of something or someone again or in a different way. Stabilize mental and physical health.)
-
- 11. Do you try and relax by relieving yourself every now and then?
- Yes
- No
 
  12. How would you best describe your mood today ?
  Fearful

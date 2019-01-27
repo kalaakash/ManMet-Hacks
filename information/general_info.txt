@@ -15,6 +15,7 @@ How often have you been bothered by trouble falling or staying asleep, or sleepi
 How often have you been bothered by poor appetite or overeating?
 How often have you been bothered by feeling bad about yourself, or that you are a failure, or have let yourself or your family down?
 How often have you been bothered by trouble concentrating on things, such as reading the newspaper or watching television?
+
 Have you recently been in a fight that has affected your mental or physical ability in a negative way?
 Have you been feeling nervous recently ?
 On a scale of 0 to 10, how emotionally stable do you think you are? (0 being least stable and 10 being extremely stable)
@@ -22,8 +23,7 @@ On a scale of 0 to 10, how emotionally stable do you think you are? (0 being lea
 
 Have you been bothered by worrying about any of the following?
 Your health, weight, little or no desire for pleasure or sex, difficulties with partner, stress at school, work or outside home,
-financial troubles, no one to turn to, something bad has happened recently,
-
+financial troubles, no one to turn to, something bad has happened recently.
 
 Specific for sadness / depression
 
