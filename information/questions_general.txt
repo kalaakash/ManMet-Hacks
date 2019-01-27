@@ -1,6 +1,6 @@
 Questions General
 
-How would you best describe your mood today ?
+1. How would you best describe your mood today ?
 Fearful
 Angry
 Sad
@@ -9,11 +9,46 @@ Jealous
 Happy
 Loving
 
-On a scale of 0 to 10, how emotionally stable do you think you are? (0 being least stable and 10 being extremely stable)
+2. On a scale of 0 to 10, how emotionally stable do you think you are? (0 being least stable and 10 being extremely stable)
 0 to 10 options
 
-Have you been bothered by moving or speaking so slowly that other people could have noticed,
+3. Have you been bothered by moving or speaking so slowly that other people could have noticed,
 or the opposite - being so fidgety or restless that you have been moving around a lot more than usual?
 
 Yes
 No
+
+4. How are you feeling today?
+Not too good
+Alright
+Good
+Very good
+Amazing
+
+5. How much water have you had today?
+<1
+1-2
+2-3
+3-4
+>4
+
+6. How many hours of sleep did you get in the past 24 hours?
+0-3
+4-6
+7-9
+10-12
+12+
+
+(if Q6 is not answered as 0-3 or 4-6) 7. Do you think that having more sleep would be healthier?
+Yes
+No
+
+(if Q6 is not answered as 10-12 or 12+) 7. Do you think that having less sleep would be healthier?
+Yes
+No
+
+9. What do you see in the following image?
+Duck (has several emotional impulses, has rapid mood swings & makes abrupt decisions)
+Rabbit (considers the possibility of each outcome, mostly logical, however not cold or insensitive)
+
+10. 
