@@ -147,11 +147,18 @@ function add_video($condStr, $title, $url) {
 	]]);
 }
 
-add_tips('2=1', ['Here is a tip']);
-add_food('2=1', 'burger', 'mmmm burgers');
-add_place('2=1', 'house', 'my house', 'hey i live here');
-add_music('2=1', 'mmm tunes', 'http://tunes.biz');
-add_video('2=0&0=0', 'rick', 'youtu.be/dQw');
+// Anger results
+add_tips('14=0', ['Pain and anger are often temporary emotons, and will pass with time.']);
+add_tips('14=0&15=0', [
+	'Try calming down by taking deep breaths and meditating.',
+	'Step back from the situation and spend a moment taking care of yourself.',
+	'Keep safety as a priority and do not injure yourself or anyone around you.'
+]);
+add_tips('14=0&16=0', [
+	'Go to your happy place - mentally or physically.',
+	'Take care not to damage relationships with others: personal attacks are easy to give but hard to undo.'
+]);
+
 // TODO: colors and also subtitle for emotion-specific questions
 
 ?>
